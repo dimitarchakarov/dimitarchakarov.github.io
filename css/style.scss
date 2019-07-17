@@ -1,0 +1,104 @@
+html {
+    font-size: 10px;
+}
+body{
+    margin: 0;
+    padding: 0;
+    h1 {font-size: 3rem;}
+    h2 {font-size: 2rem;}
+    h3 {font-size: 1.5rem;}
+    h4 {font-size: 1.5rem;}
+    p {font-size: 1.5rem;}
+}
+.main {
+    display: grid;
+    grid-template-rows: auto auto auto;
+}
+.section-greeting {
+    padding: 0 1rem;
+    display: grid;
+    grid-template-rows: 1fr auto 0.5fr auto 0.5fr auto 1fr;
+    justify-items: center;
+    text-align: center;
+    height: 100vh;
+    background: url(/images/bg-home.jpg) rgba(0, 0, 0, 0.3) no-repeat center left fixed;
+    background-size: cover;
+    background-blend-mode: darken;
+    color: whitesmoke;
+    .name {
+        grid-row: 2;
+    }
+    .welcome {
+        grid-row: 4;
+    }
+    .slider {
+        grid-row: 6;
+    }
+    .slide {
+        grid-row: 7;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.section-gallery {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    justify-items: center;
+    justify-self: center;
+    text-align: center;
+    p {
+        text-align: justify;
+        max-width: 500px;
+        padding: 0 1rem;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    .gbd-subheading {
+        text-transform: uppercase;
+    }
+    .button {
+        background-color: #dddddd;
+        color: black;
+        padding: 1rem 2rem;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        display: inline-block;
+        font-size: 1.5rem;
+        font-weight: 700;
+        width: calc(100% - 4rem);
+      }
+    .sg-block {
+        padding-bottom: 4rem;
+    }
+
+}
+.about {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    justify-items: center;
+    justify-self: center;
+    text-align: center;
+    background: url(/images/bg-about.jpg) rgba(0, 0, 0, 0.3) no-repeat center center fixed;
+    background-size: cover;
+    background-blend-mode: darken;
+    color: whitesmoke;
+    p {
+        text-align: justify;
+        // max-width: 500px;
+        padding: 0 1rem;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+        opacity: 0.3;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .about .about-image {
+        display: none;
+    }
+}
