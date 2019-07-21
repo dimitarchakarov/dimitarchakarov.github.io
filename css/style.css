@@ -261,7 +261,7 @@ body p {
   }
 }
 
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 1079px) {
   .section-about .sa-image {
     display: none;
   }
