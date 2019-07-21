@@ -47,7 +47,7 @@ body{
     justify-items: center;
     justify-self: center;
     text-align: center;
-    width: 100vw;
+    width: 100%;
     p {
         text-align: justify;
         max-width: 500px;
@@ -83,7 +83,7 @@ body{
     justify-items: center;
     justify-self: center;
     text-align: center;
-    width: 100vw;
+    width: 100%;
     background: url(/images/bg-about.jpg) rgba(0, 0, 0, 0.3) no-repeat center center fixed;
     background-size: cover;
     background-blend-mode: darken;
@@ -92,7 +92,7 @@ body{
     p {
         text-align: justify;
         max-width: 500px;
-        // padding: 0 1rem;
+        padding: 0 1rem;
     }
     .sa-image {
         padding-bottom: 0px;
@@ -104,7 +104,7 @@ body{
         padding-bottom: 0px;
     }
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1080px) {
     .section-about .sa-image {
         display: none;
     }
@@ -124,7 +124,7 @@ body{
     }
     .section-gallery .sg-block {
         display: flex;
-        // width: 100%;
+        width: 100%;
         flex-direction: row;
         align-items: stretch;
         justify-content: center;

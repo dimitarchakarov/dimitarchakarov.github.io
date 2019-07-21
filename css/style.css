@@ -88,7 +88,7 @@ body p {
   -ms-grid-column-align: center;
       justify-self: center;
   text-align: center;
-  width: 100vw;
+  width: 100%;
 }
 
 .section-gallery p {
@@ -132,7 +132,7 @@ body p {
   -ms-grid-column-align: center;
       justify-self: center;
   text-align: center;
-  width: 100vw;
+  width: 100%;
   background: url(/images/bg-about.jpg) rgba(0, 0, 0, 0.3) no-repeat center center fixed;
   background-size: cover;
   background-blend-mode: darken;
@@ -143,6 +143,7 @@ body p {
 .section-about p {
   text-align: justify;
   max-width: 500px;
+  padding: 0 1rem;
 }
 
 .section-about .sa-image {
@@ -156,7 +157,7 @@ body p {
   padding-bottom: 0px;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1080px) {
   .section-about .sa-image {
     display: none;
   }
@@ -181,6 +182,7 @@ body p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    width: 100%;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
