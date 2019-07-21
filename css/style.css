@@ -123,7 +123,7 @@ body p {
   padding-bottom: 4rem;
 }
 
-.about {
+.section-about {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: auto auto auto;
@@ -137,32 +137,42 @@ body p {
   background-size: cover;
   background-blend-mode: darken;
   color: whitesmoke;
+  padding-bottom: 0px;
 }
 
-.about p {
+.section-about p {
   text-align: justify;
   max-width: 500px;
-  padding: 0 1rem;
 }
 
-.about img {
+.section-about .sa-image {
+  padding-bottom: 0px;
+}
+
+.section-about img {
   max-width: 100%;
   height: auto;
   opacity: 0.3;
+  padding-bottom: 0px;
 }
 
 @media only screen and (max-width: 1024px) {
-  .about .about-image {
+  .section-about .sa-image {
     display: none;
+  }
+}
+
+@media only screen and (min-width: 501px) {
+  .section-gallery .sg-block a img {
+    -webkit-box-shadow: 1px 1px 20px 1px #000;
+            box-shadow: 1px 1px 20px 1px #000;
+    border-radius: 0.2rem;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   html {
     font-size: 12px;
-  }
-  .section-gallery {
-    padding: 1rem;
   }
   .section-gallery p {
     padding: 0;
@@ -171,7 +181,6 @@ body p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 100%;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -182,8 +191,8 @@ body p {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .section-gallery .sg-block .gallery-block-image {
     -webkit-box-orient: vertical;
@@ -191,11 +200,6 @@ body p {
         -ms-flex-direction: column;
             flex-direction: column;
     padding: 20px;
-  }
-  .section-gallery .sg-block .gallery-block-image a img {
-    -webkit-box-shadow: 1px 1px 20px 1px #000;
-            box-shadow: 1px 1px 20px 1px #000;
-    border-radius: 0.2rem;
   }
   .section-gallery .sg-block .gallery-block-description {
     -webkit-box-orient: vertical;
@@ -235,6 +239,29 @@ body p {
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
+  }
+  .section-about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section-about .sa-image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 }
 /*# sourceMappingURL=style.css.map */

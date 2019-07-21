@@ -77,7 +77,7 @@ body{
     }
 
 }
-.about {
+.section-about {
     display: grid;
     grid-template-rows: auto auto auto;
     justify-items: center;
@@ -88,46 +88,50 @@ body{
     background-size: cover;
     background-blend-mode: darken;
     color: whitesmoke;
+    padding-bottom: 0px;
     p {
         text-align: justify;
         max-width: 500px;
-        padding: 0 1rem;
+        // padding: 0 1rem;
+    }
+    .sa-image {
+        padding-bottom: 0px;
     }
     img {
         max-width: 100%;
         height: auto;
         opacity: 0.3;
+        padding-bottom: 0px;
     }
 }
 @media only screen and (max-width: 1024px) {
-    .about .about-image {
+    .section-about .sa-image {
         display: none;
+    }
+}
+@media only screen and (min-width: 501px) {
+    .section-gallery .sg-block a img {
+            box-shadow: 1px 1px 20px 1px #000;
+            border-radius: 0.2rem;
     }
 }
 @media only screen and (min-width: 1024px) {
     html {
         font-size: 12px;
     }
-    .section-gallery {
-        padding: 1rem;
-    }
     .section-gallery p {
         padding: 0;
     }
     .section-gallery .sg-block {
         display: flex;
-        width: 100%;
+        // width: 100%;
         flex-direction: row;
         align-items: stretch;
         justify-content: center;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         .gallery-block-image {
             flex-direction: column;
             padding: 20px;
-            a img {
-                box-shadow: 1px 1px 20px 1px #000;
-                border-radius: 0.2rem;
-            }
         }
         .gallery-block-description {
             flex-direction: column;
@@ -154,8 +158,18 @@ body{
                 width: 50%;
             }
         }
-    }
-    .section-gallery #macedonia {
-        flex-direction: row-reverse;
+        }
+        .section-gallery #macedonia {
+            flex-direction: row-reverse;
+        }
+    .section-about {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        .sa-image {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
     }
 }
