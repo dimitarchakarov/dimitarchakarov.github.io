@@ -11,15 +11,16 @@ body{
     p {font-size: 1.5rem;}
 }
 .main {
-    display: block;
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    .section-greeting .slider .slide h4{
-        margin-top: 1rem;
-        margin-bottom: 0;
-    }
-    .section-greeting .slider .slide .slide-icon {
-        width: 5rem;
-    }
+}
+.section-greeting .slider .slide h4{
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+.section-greeting .slider .slide .slide-icon {
+    width: 5rem;
 }
 .button {
     background-color: #dddddd;
@@ -122,80 +123,82 @@ body{
             padding-bottom: 0px;
         }
     }
-}
-@media only screen and (min-width: 501px) {
-    .section-gallery .sg-block a img {
-            box-shadow: 1px 1px 20px 1px #000;
-            border-radius: 0.2rem;
-    }
-}
-@media only screen and (min-width: 1080px) {
-    html {
-        font-size: 12px;
-    }
-    .section-greeting {
-        h1 {font-size: 5rem;}
-        h2 {font-size: 3rem;}
-        h3 {font-size: 2rem;}
-        h4 {font-size: 2rem;}
-        p {font-size: 1.5rem;}
-    }
-    .section-gallery p {
-        padding: 0;
-    }
-    .section-gallery .sg-block {
-        display: flex;
-        width: 100%;
-        flex-direction: row;
-        align-items: stretch;
-        justify-content: center;
-        flex-wrap: wrap;
-        .gallery-block-image {
-            flex-direction: column;
-            padding: 20px;
+
+    @media only screen and (min-width: 501px) {
+        .section-gallery .sg-block a img {
+                box-shadow: 1px 1px 20px 1px #000;
+                border-radius: 0.2rem;
         }
-        .gallery-block-description {
-            flex-direction: column;
+    }
+    @media only screen and (min-width: 1080px) {
+        html {
+            font-size: 12px;
+        }
+        .section-greeting {
+            h1 {font-size: 5rem;}
+            h2 {font-size: 3rem;}
+            h3 {font-size: 2rem;}
+            h4 {font-size: 2rem;}
+            p {font-size: 1.5rem;}
+        }
+        .section-gallery p {
+            padding: 0;
+        }
+        // .section-gallery .sg-block {
+            .sg-block {
             display: flex;
-            text-align: center;
-            align-items: flex-start;
-            justify-content: space-around;
-            padding: 20px;
-            h2 {
-                margin: 0;
+            width: 100%;
+            flex-direction: row;
+            align-items: stretch;
+            justify-content: center;
+            flex-wrap: wrap;
+            .gallery-block-image {
+                flex-direction: column;
+                padding: 20px;
             }
-            h3 {
-                margin: 0;
+            .gallery-block-description {
+                flex-direction: column;
+                display: flex;
+                text-align: center;
+                align-items: flex-start;
+                justify-content: space-around;
+                padding: 20px;
+                h2 {
+                    margin: 0;
+                }
+                h3 {
+                    margin: 0;
+                }
+                .gbd-subheading::after {
+                    display: block;
+                    background-color: #60b0f4;
+                    height: 5px;
+                    margin-top: 15px;
+                    width: 75px;
+                    content: "";
+                }
+                .button {
+                    width: 50%;
+                }
             }
-            .gbd-subheading::after {
-                display: block;
-                background-color: #60b0f4;
-                height: 5px;
-                margin-top: 15px;
-                width: 75px;
-                content: "";
             }
-            .button {
-                width: 50%;
+            .section-gallery #macedonia {
+                flex-direction: row-reverse;
             }
-        }
-        }
-        .section-gallery #macedonia {
-            flex-direction: row-reverse;
-        }
-    .section-about {
-        display: flex;
-        align-items: stretch;
-        justify-content: center;
-        .sa-image {
+        .section-about {
             display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
+            align-items: stretch;
+            justify-content: center;
+            .sa-image {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+            }
         }
     }
-}
-@media only screen and (max-width: 1079px) {
-    .section-about .sa-image {
-        display: none;
+    @media only screen and (max-width: 1079px) {
+        .section-about .sa-image {
+            display: none;
+        }
     }
 }
