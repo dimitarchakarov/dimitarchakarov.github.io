@@ -99,8 +99,13 @@ body{
         opacity: 0.3;
     }
 }
-@media only screen and (max-width: 768px) {
-    .about .about-image {
-        display: none;
+// @media only screen and (max-width: 768px) {
+//     .about .about-image {
+//         display: none;
+//     }
+// }
+@media only screen and (min-width: 768px) {
+    .section-gallery {
+        // grid-template-columns: 1fr auto auto 1fr;
     }
 }

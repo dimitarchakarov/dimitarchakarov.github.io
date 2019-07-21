@@ -150,10 +150,4 @@ body p {
   height: auto;
   opacity: 0.3;
 }
-
-@media only screen and (max-width: 768px) {
-  .about .about-image {
-    display: none;
-  }
-}
 /*# sourceMappingURL=style.css.map */
