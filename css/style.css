@@ -157,12 +157,6 @@ body p {
   padding-bottom: 0px;
 }
 
-@media only screen and (max-width: 1080px) {
-  .section-about .sa-image {
-    display: none;
-  }
-}
-
 @media only screen and (min-width: 501px) {
   .section-gallery .sg-block a img {
     -webkit-box-shadow: 1px 1px 20px 1px #000;
@@ -171,7 +165,7 @@ body p {
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1080px) {
   html {
     font-size: 12px;
   }
@@ -264,6 +258,12 @@ body p {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  .section-about .sa-image {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
