@@ -151,13 +151,16 @@ body p {
   opacity: 0.3;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .about .about-image {
     display: none;
   }
 }
 
 @media only screen and (min-width: 1024px) {
+  html {
+    font-size: 12px;
+  }
   .section-gallery {
     padding: 1rem;
   }
@@ -168,6 +171,70 @@ body p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .section-gallery .sg-block .gallery-block-image {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 20px;
+  }
+  .section-gallery .sg-block .gallery-block-image a img {
+    -webkit-box-shadow: 1px 1px 20px 1px #000;
+            box-shadow: 1px 1px 20px 1px #000;
+    border-radius: 0.2rem;
+  }
+  .section-gallery .sg-block .gallery-block-description {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 20px;
+  }
+  .section-gallery .sg-block .gallery-block-description h2 {
+    margin: 0;
+  }
+  .section-gallery .sg-block .gallery-block-description h3 {
+    margin: 0;
+  }
+  .section-gallery .sg-block .gallery-block-description .gbd-subheading::after {
+    display: block;
+    background-color: #60b0f4;
+    height: 5px;
+    margin-top: 15px;
+    width: 75px;
+    content: "";
+  }
+  .section-gallery .sg-block .gallery-block-description .button {
+    width: 50%;
+  }
+  .section-gallery #macedonia {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
   }
 }
 /*# sourceMappingURL=style.css.map */
