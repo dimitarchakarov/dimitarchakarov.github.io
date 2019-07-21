@@ -21,9 +21,9 @@ body{
     justify-items: center;
     text-align: center;
     height: 100vh;
-    background: url(/images/bg-home.jpg) rgba(0, 0, 0, 0.3) no-repeat center left fixed;
-    background-size: cover;
-    background-blend-mode: darken;
+    background-size: auto, cover;
+    background-image: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)), url(/images/bg-home.jpg);
+    background-attachment: fixed;
     color: whitesmoke;
     .name {
         grid-row: 2;
@@ -87,9 +87,10 @@ body{
     justify-self: center;
     text-align: center;
     width: 100%;
-    background: url(/images/bg-about.jpg) rgba(0, 0, 0, 0.3) no-repeat center center fixed;
-    background-size: cover;
-    background-blend-mode: darken;
+    background-image: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)), url(/images/bg-about.jpg);
+    background-size: auto, cover;
+    background-attachment: fixed;
+    background-position: center;
     color: whitesmoke;
     padding-bottom: 0px;
     p {
