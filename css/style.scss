@@ -10,10 +10,16 @@ body{
     h4 {font-size: 1.5rem; font-weight: 300;}
     p {font-size: 1.5rem;}
 }
-
 .main {
     display: block;
     text-align: center;
+    .section-greeting .slider .slide h4{
+        margin-top: 1rem;
+        margin-bottom: 0;
+    }
+    .section-greeting .slider .slide .slide-icon {
+        width: 5rem;
+    }
 }
 // Feature querry only for browsers that support CSS Grid.
 @supports (display: grid) {
