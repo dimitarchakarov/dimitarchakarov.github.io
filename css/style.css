@@ -150,4 +150,24 @@ body p {
   height: auto;
   opacity: 0.3;
 }
+
+@media only screen and (max-width: 768px) {
+  .about .about-image {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .section-gallery {
+    padding: 1rem;
+  }
+  .section-gallery p {
+    padding: 0;
+  }
+  .section-gallery .sg-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
 /*# sourceMappingURL=style.css.map */
