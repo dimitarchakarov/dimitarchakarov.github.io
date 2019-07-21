@@ -88,6 +88,7 @@ body p {
   -ms-grid-column-align: center;
       justify-self: center;
   text-align: center;
+  width: 100vw;
 }
 
 .section-gallery p {
@@ -131,6 +132,7 @@ body p {
   -ms-grid-column-align: center;
       justify-self: center;
   text-align: center;
+  width: 100vw;
   background: url(/images/bg-about.jpg) rgba(0, 0, 0, 0.3) no-repeat center center fixed;
   background-size: cover;
   background-blend-mode: darken;
@@ -139,6 +141,7 @@ body p {
 
 .about p {
   text-align: justify;
+  max-width: 500px;
   padding: 0 1rem;
 }
 
