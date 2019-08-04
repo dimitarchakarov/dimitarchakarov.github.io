@@ -28,6 +28,8 @@ header {
     position: fixed;
     z-index: 10;
     width: 100%;
+    box-shadow: 1px 1px 20px 1px #000;
+    border-radius: 0.2rem;
   }
   
   /* allow it to gain focus, making it tabbable */
@@ -124,6 +126,7 @@ header {
   }
   
   @media screen and (min-width: 800px) {
+
     .nav-toggle-label {
       display: none;
     }
