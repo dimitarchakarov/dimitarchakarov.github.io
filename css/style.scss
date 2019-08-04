@@ -197,7 +197,7 @@ header {
     }
     
     header nav li {
-      margin-left: 3em;
+      margin-left: 3rem;
       margin-bottom: 0;
       padding: 0;
     }
@@ -238,8 +238,6 @@ header {
     font-size: 1.5rem;
     font-weight: 400;
     width: calc(100% - 4rem);
-    box-shadow: 0px 0px 2px 0px #000;
-    border-radius: 0.2rem;
 }
 // Feature querry only for browsers that support CSS Grid.
 @supports (display: grid) {
@@ -340,6 +338,10 @@ header {
                 box-shadow: 1px 1px 20px 1px #000;
                 border-radius: 0.2rem;
         }
+        .button {
+            box-shadow: 0px 0px 2px 0px #000;
+            border-radius: 0.2rem;
+        }
     }
     @media only screen and (min-width: 1080px) {
         html {
@@ -417,7 +419,7 @@ header {
 // ----------------------------------------
     footer {
         display: grid;
-        grid-template-rows: 1fr auto auto 20px;
+        grid-template-rows: auto auto;
         background: var(--background);
         text-align: center;
         // width: 100%;
@@ -426,12 +428,11 @@ header {
     }
     
     .footer-logo{
-        // grid-column: 2 / 3;
         grid-row: 2 / 3;
         justify-self: center;
         width: 15rem;
-        padding: 0.7rem;
-        margin: 0.7rem;
+        padding: 0;
+        margin: 0;
         .st0{
             fill:#60B0F4;
         }
@@ -448,26 +449,50 @@ header {
         left: initial;
         /* end Edge support stuff */
         
-        grid-row: 3 / 4;
+        grid-row: 1 / 2;
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
     }
         
     footer nav ul {
         display: flex;
+        flex-direction: column;
     }
         
     footer nav li {
-        margin-left: 3em;
-        margin-bottom: 0;
+        // margin-left: 3em;
+        margin-top: 1rem;
+        padding: 1rem;
         padding: 0;
     }
         
     footer nav a {
         opacity: 1;
         position: relative;
+        color: black;
+    }
+
+    footer p {
+        grid-row: 3 / 4;
+        font-size: 1.1rem;
     }
      
+    @media screen and (min-width: 800px) {
+        footer nav ul {
+            flex-direction: row;
+        }
+        
+        footer nav li {
+            margin-left: 1.5rem;
+            margin-right: 1.5rem;
+        }
+
+        footer nav a {
+            color: #60B0F4;
+        }
+    }
 // --------------------------------------
 // /* Footer styles end here */
