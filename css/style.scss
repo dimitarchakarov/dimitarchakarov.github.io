@@ -170,12 +170,12 @@ header {
       grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
     }
     
-    .logo {
+    header .logo {
       grid-column: 2 / 3;
       margin: 0;
     }
     
-    nav {
+    header nav {
       // all: unset; /* this causes issues with Edge, since it's unsupported */
       position: relative;
       text-align: left;
@@ -192,17 +192,17 @@ header {
       align-items: center;
     }
     
-    nav ul {
+    header nav ul {
       display: flex;
     }
     
-    nav li {
+    header nav li {
       margin-left: 3em;
       margin-bottom: 0;
       padding: 0;
     }
     
-    nav a {
+    header nav a {
       opacity: 1;
       position: relative;
     }
@@ -412,3 +412,62 @@ header {
         }
     }
 }
+
+// /* Footer styles start here */
+// ----------------------------------------
+    footer {
+        display: grid;
+        grid-template-rows: 1fr auto auto 20px;
+        background: var(--background);
+        text-align: center;
+        // width: 100%;
+        box-shadow: 1px 1px 20px 1px #000;
+        border-radius: 0.2rem;
+    }
+    
+    .footer-logo{
+        // grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        justify-self: center;
+        width: 15rem;
+        padding: 0.7rem;
+        margin: 0.7rem;
+        .st0{
+            fill:#60B0F4;
+        }
+    }
+              
+    footer nav {
+        // all: unset; /* this causes issues with Edge, since it's unsupported */
+        position: relative;
+        text-align: center;
+        transition: none;
+        transform: scale(1,1);
+        background: none;
+        top: initial;
+        left: initial;
+        /* end Edge support stuff */
+        
+        grid-row: 3 / 4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+        
+    footer nav ul {
+        display: flex;
+    }
+        
+    footer nav li {
+        margin-left: 3em;
+        margin-bottom: 0;
+        padding: 0;
+    }
+        
+    footer nav a {
+        opacity: 1;
+        position: relative;
+    }
+     
+// --------------------------------------
+// /* Footer styles end here */
