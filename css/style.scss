@@ -1,3 +1,11 @@
+:root {
+    --background: rgba(240, 240, 240, 1);
+  }
+  
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
 html {
     font: 10px Georgia, serif;
 }
@@ -10,6 +18,166 @@ body{
     h4 {font-size: 1.5rem; font-weight: 300;}
     p {font-size: 1.5rem;}
 }
+
+
+// /* navigation styles start here */
+
+header {
+    background: var(--background);
+    text-align: center;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+  }
+  
+  /* allow it to gain focus, making it tabbable */
+  .nav-toggle {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+  }
+  
+  .logo{
+      width: 18rem;
+      padding: 0.5rem;
+      .st0{
+          fill:#60B0F4;
+        }
+  }
+  .nav-toggle-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-toggle-label span,
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after {
+    display: block;
+    background: #60B0F4;
+    height: 2px;
+    width: 3rem;
+    border-radius: 2px;
+    position: relative;
+  }
+  
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+  }
+  
+  .nav-toggle-label span::before {
+    bottom: 8px;
+  }
+  
+  .nav-toggle-label span::after {
+    top: 8px;
+  }
+  
+  nav {
+    position: absolute;
+    text-align: center;
+    top: 100%;
+    right: 0;
+    background: var(--background);
+    width: 100%;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 200ms ease-in-out;
+  }
+  
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  nav li {
+    margin-bottom: 1rem;
+  }
+  
+  nav a {
+    color: #60B0F4;
+    text-decoration: none;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 100ms ease-in-out;
+  }
+  
+  nav a:hover {
+    color: #000;
+  }
+  
+  .nav-toggle:checked ~ nav {
+    transform: scale(1,1);
+  }
+  
+  .nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 150ms ease-in-out 250ms;
+  }
+  
+  @media screen and (min-width: 800px) {
+    .nav-toggle-label {
+      display: none;
+    }
+  
+    header {
+      display: grid;
+      grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+    }
+    
+    .logo {
+      grid-column: 2 / 3;
+    }
+    
+    nav {
+      // all: unset; /* this causes issues with Edge, since it's unsupported */
+      
+      /* the following lines are not from my video, but add Edge support */
+      position: relative;
+      text-align: left;
+      transition: none;
+      transform: scale(1,1);
+      background: none;
+      top: initial;
+      left: initial;
+      /* end Edge support stuff */
+      
+      grid-column: 3 / 4;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    
+    nav ul {
+      display: flex;
+    }
+    
+    nav li {
+      margin-left: 3em;
+      margin-bottom: 0;
+    }
+    
+    nav a {
+      opacity: 1;
+      position: relative;
+    }
+    
+  }
+  
+
+// End of Header CSS style
+
+
+// Start of main body CSS style
+
 .main {
     display: flex;
     flex-direction: column;
