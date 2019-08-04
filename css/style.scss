@@ -228,7 +228,7 @@ header {
     width: 5rem;
 }
 .button {
-    background-color: #dddddd;
+    background-color: var(--background);
     color: black;
     padding: 1rem 2rem;
     text-align: center;
@@ -238,6 +238,8 @@ header {
     font-size: 1.5rem;
     font-weight: 400;
     width: calc(100% - 4rem);
+    box-shadow: 0px 0px 2px 0px #000;
+    border-radius: 0.2rem;
 }
 // Feature querry only for browsers that support CSS Grid.
 @supports (display: grid) {
@@ -326,6 +328,10 @@ header {
             height: auto;
             opacity: 0.3;
             padding-bottom: 0px;
+        }
+        a {
+            text-decoration: none;
+            color: whitesmoke;
         }
     }
 
