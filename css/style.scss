@@ -142,7 +142,7 @@ header {
   }
 // Turn lines into X
   .nav-toggle:checked ~ .nav-toggle-label span::before,
-  .nav-toggle:checked ~ .nav-toggle-label span::after, {
+  .nav-toggle:checked ~ .nav-toggle-label span::after {
     top:0;
     transform: rotate(90deg);
   }
