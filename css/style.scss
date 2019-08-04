@@ -77,6 +77,7 @@ header {
     width: 3rem;
     border-radius: 2px;
     position: relative;
+    transition: all 0.4s ease;
   }
   
   .nav-toggle-label span::before,
@@ -132,6 +133,26 @@ header {
     transform: scale(1,1);
   }
   
+
+// Animate hamburger on click begins
+// ---------------------------------
+  .nav-toggle:checked ~ .nav-toggle-label span {
+    transform: rotate(135deg);
+  }
+// Turn lines into X
+  .nav-toggle:checked ~ .nav-toggle-label span::before,
+  .nav-toggle:checked ~ .nav-toggle-label span::after, {
+    top:0;
+    transform: rotate(90deg);
+  }
+// Rotate on hover when checked
+  .nav-toggle:checked:hover ~ .nav-toggle-label span {
+    transform: rotate(225deg);
+  }
+// -------------------------------
+// Animate hamburger on click ends
+
+
   .nav-toggle:checked ~ nav a {
     opacity: 1;
     transition: opacity 150ms ease-in-out 250ms;
