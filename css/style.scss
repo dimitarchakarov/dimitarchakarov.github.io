@@ -1,10 +1,21 @@
+// Beginning of Global Variables
+// -----------------------------
 :root {
     --background: rgba(240, 240, 240, 1);
   }
-  
+// -----------------------------
+// End of Global Variables
+
+
+
+// Pseudo elements box-sizing reset
+// --------------------------------
   *, *::before, *::after {
     box-sizing: border-box;
   }
+// --------------------------------
+
+
 
 html {
     font: 10px Georgia, serif;
@@ -20,8 +31,8 @@ body{
 }
 
 
-// /* navigation styles start here */
-
+// /* Navigation Header styles start here */
+// ----------------------------------------
 header {
     background: var(--background);
     text-align: center;
@@ -40,8 +51,9 @@ header {
   }
   
   .logo{
-      width: 18rem;
-      padding: 0.5rem;
+      width: 20rem;
+      padding: 0.7rem;
+      margin: 0.7rem;
       .st0{
           fill:#60B0F4;
         }
@@ -61,7 +73,7 @@ header {
   .nav-toggle-label span::after {
     display: block;
     background: #60B0F4;
-    height: 2px;
+    height: 3px;
     width: 3rem;
     border-radius: 2px;
     position: relative;
@@ -138,12 +150,11 @@ header {
     
     .logo {
       grid-column: 2 / 3;
+      margin: 0;
     }
     
     nav {
       // all: unset; /* this causes issues with Edge, since it's unsupported */
-      
-      /* the following lines are not from my video, but add Edge support */
       position: relative;
       text-align: left;
       transition: none;
@@ -175,8 +186,8 @@ header {
     
   }
   
-
-// End of Header CSS style
+// --------------------------------------
+// /* Navigation Header styles end here */
 
 
 // Start of main body CSS style
@@ -315,8 +326,7 @@ header {
         .section-gallery p {
             padding: 0;
         }
-        // .section-gallery .sg-block {
-            .sg-block {
+        .sg-block {
             display: flex;
             width: 100%;
             flex-direction: row;
@@ -352,7 +362,7 @@ header {
                     width: 50%;
                 }
             }
-            }
+        }
             .section-gallery #macedonia {
                 flex-direction: row-reverse;
             }
