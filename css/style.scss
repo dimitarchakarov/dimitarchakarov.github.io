@@ -372,7 +372,9 @@ grid-template-rows: repeat(3, auto);
       max-width: 500px;
       padding: 1em;
     }
-
+    .gallery-h1 {
+      padding-top: 4em;
+    }
 }
 // --------------------------------------
 // /* Section Gallery styles ends here */
@@ -443,6 +445,8 @@ grid-template-rows: repeat(3, auto);
         border-radius: 0.2em;
     }
 
+
+
 }
 
 @media only screen and (min-width: 640px) {
@@ -457,6 +461,7 @@ grid-template-rows: repeat(3, auto);
   .section-greeting h1 {
     font-size: 3rem;
   }
+
 }
 
 @media only screen and (min-width: 1080px) {
@@ -477,6 +482,9 @@ grid-template-rows: repeat(3, auto);
         padding-top: 0;
       }
       p {padding: 0 0 1em 0;}
+      .gallery-h1 {
+        padding-top: 1em;
+      }
     }
 
     .sg-block {
@@ -544,9 +552,7 @@ grid-template-rows: repeat(3, auto);
         grid-column: 4 / 5;
         align-self: end;
       }
-
-}
-
+} 
 
 @media only screen and (max-width: 1079px) {
 
