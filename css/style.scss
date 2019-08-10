@@ -61,7 +61,6 @@
   display: inline-block;
   font-size: 1rem;
   font-weight: 600;
-  // width: calc(100% - 4em);
   width: 100%;
 }
 
@@ -84,10 +83,6 @@ h1 {
 // --------------------------------------
 
 
-
-
-
-
 // --------------------------------------
 // /* Body styles starts here */
 // --------------------------------------
@@ -99,11 +94,6 @@ grid-template-rows: repeat(3, auto);
 // --------------------------------------
 // End of Body styles
 // --------------------------------------
-
-
-
-
-
 
 // --------------------------------------
 // /* Navigation Header styles starts here */
@@ -540,17 +530,20 @@ grid-template-rows: repeat(3, auto);
         }
 
     .section-about {
-        display: flex;
-        align-items: stretch;
-        justify-content: center;
-
-        .sa-image {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-        }
+      grid-template-columns: 1fr auto 1em auto 1fr;
+      align-content: end;
     }
+
+      .sa-description {
+        grid-column: 2 / 3;
+      }
+      .sa-image {
+        grid-column: 4 / 5;
+        align-self: end;
+      }
+      
 }
+
 
 @media only screen and (max-width: 1079px) {
 
