@@ -1,497 +1,610 @@
+// --------------------------------------
 // Beginning of Global Variables
-// -----------------------------
+// --------------------------------------
 :root {
-    --background: rgba(240, 240, 240, 1);
-  }
-// -----------------------------
+  --background: rgba(240, 240, 240, 1);
+  font-family: 'Merriweather', serif;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.button {
+  background-color: var(--background);
+  color: black;
+  padding: 1em 2em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 600;
+  // width: calc(100% - 4em);
+  width: 100%;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+// --------------------------------------
 // End of Global Variables
+// --------------------------------------
 
 
-
+// --------------------------------------
 // Pseudo elements box-sizing reset
-// --------------------------------
-  *, *::before, *::after {
-    box-sizing: border-box;
-  }
-// --------------------------------
-
-
-
-html {
-    font: 10px Georgia, serif;
+// --------------------------------------
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
-body{
-    margin: 0;
-    padding: 0;
-    h1 {font-size: 3rem; font-weight: 300;}
-    h2 {font-size: 2rem; font-weight: 300;}
-    h3 {font-size: 1.5rem; font-weight: 300;}
-    h4 {font-size: 1.5rem; font-weight: 300;}
-    p {font-size: 1.5rem;}
+// --------------------------------------
+
+
+
+
+
+
+// --------------------------------------
+// /* Body styles starts here */
+// --------------------------------------
+body {
+display: grid;
+grid-template-columns: auto;
+grid-template-rows: repeat(3, auto);
 }
+// --------------------------------------
+// End of Body styles
+// --------------------------------------
 
 
-// /* Navigation Header styles start here */
+
+
+
+
+// --------------------------------------
+// /* Navigation Header styles starts here */
 // ----------------------------------------
 header {
-    background: var(--background);
-    text-align: center;
-    position: fixed;
-    z-index: 10;
-    width: 100%;
-    box-shadow: 1px 1px 20px 1px #000;
-    border-radius: 0.2rem;
-  }
-  
-  /* allow it to gain focus, making it tabbable */
-  .nav-toggle {
-    position: absolute !important;
-    top: -9999px !important;
-    left: -9999px !important;
-  }
-  
-  .logo{
-      width: 20rem;
-      padding: 0.7rem;
-      margin: 0.7rem;
-      .st0{
-          fill:#60B0F4;
-        }
-  }
-  .nav-toggle-label {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-right: 1rem;
-    height: 100%;
-    display: flex;
-    align-items: center;
-  }
-  
-  .nav-toggle-label span,
-  .nav-toggle-label span::before,
-  .nav-toggle-label span::after {
-    display: block;
-    background: #60B0F4;
-    height: 3px;
-    width: 3rem;
-    border-radius: 2px;
-    position: relative;
-    transition: all 0.4s ease;
-  }
-  
-  .nav-toggle-label span::before,
-  .nav-toggle-label span::after {
-    content: '';
-    position: absolute;
-  }
-  
-  .nav-toggle-label span::before {
-    bottom: 8px;
-  }
-  
-  .nav-toggle-label span::after {
-    top: 8px;
-  }
-  
-  nav {
-    position: absolute;
-    text-align: center;
-    top: 100%;
-    right: 0;
-    background: var(--background);
-    width: 100%;
-    transform: scale(1, 0);
-    transform-origin: top;
-    transition: transform 200ms ease-in-out;
-  }
-  
-  nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  
-  nav li {
-    margin-bottom: 1rem;
-    padding: 1rem;
-  }
-  
-  nav a {
-    color: #60B0F4;
-    text-decoration: none;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    opacity: 0;
-    transition: opacity 100ms ease-in-out;
-  }
-  
-  nav a:hover {
-    color: #000;
-  }
-  
-  .nav-toggle:checked ~ nav {
-    transform: scale(1,1);
-  }
-  
-
-// Animate hamburger on click begins
-// ---------------------------------
-  .nav-toggle:checked ~ .nav-toggle-label span {
-    transform: rotate(135deg);
-  }
-// Turn lines into X
-  .nav-toggle:checked ~ .nav-toggle-label span::before,
-  .nav-toggle:checked ~ .nav-toggle-label span::after {
-    top:0;
-    transform: rotate(90deg);
-  }
-// Rotate on hover when checked
-  .nav-toggle:checked:hover ~ .nav-toggle-label span {
-    transform: rotate(225deg);
-  }
-// -------------------------------
-// Animate hamburger on click ends
-
-
-  .nav-toggle:checked ~ nav a {
-    opacity: 1;
-    transition: opacity 150ms ease-in-out 250ms;
-  }
-  
-  @media screen and (min-width: 800px) {
-
-    .nav-toggle-label {
-      display: none;
-    }
-  
-    header {
-      display: grid;
-      grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
-    }
-    
-    header .logo {
-      grid-column: 2 / 3;
-      margin: 0;
-    }
-    
-    header nav {
-      // all: unset; /* this causes issues with Edge, since it's unsupported */
-      position: relative;
-      text-align: left;
-      transition: none;
-      transform: scale(1,1);
-      background: none;
-      top: initial;
-      left: initial;
-      /* end Edge support stuff */
-      
-      grid-column: 3 / 4;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-    }
-    
-    header nav ul {
-      display: flex;
-    }
-    
-    header nav li {
-      margin-left: 3rem;
-      margin-bottom: 0;
-      padding: 0;
-    }
-    
-    header nav a {
-      opacity: 1;
-      position: relative;
-    }
-    
-  }
-  
-// --------------------------------------
-// /* Navigation Header styles end here */
-
-
-// Start of main body CSS style
-
-.main {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+  background: var(--background);
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  box-shadow: 1px 1px 20px 1px #000;
+  border-radius: 0.2em;
 }
-.section-greeting .slider .slide h4{
-    margin-top: 1rem;
-    margin-bottom: 0;
-}
-.section-greeting .slider .slide .slide-icon {
-    width: 5rem;
-}
-.button {
-    background-color: var(--background);
-    color: black;
-    padding: 1rem 2rem;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    display: inline-block;
-    font-size: 1.5rem;
-    font-weight: 400;
-    width: calc(100% - 4rem);
-}
-// Feature querry only for browsers that support CSS Grid.
-@supports (display: grid) {
-// If the browser supports CSS Grid the code below will run
-    // .main {
-    //     display: grid;
-    //     grid-template-rows: auto auto auto;
-    //     grid-template-columns: 1fr auto 1fr;
-    // }
-    .section-greeting {
-        padding: 0 1rem;
-        display: grid;
-        grid-template-rows: 1fr auto 0.5fr auto 0.5fr auto 1fr;
-        place-items: center;
-        height: 100vh;
-        background-size: auto, cover;
-        background-image: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)), url(/images/bg-home.jpg);
-        background-attachment: fixed;
-        color: whitesmoke;
-        .name {
-            grid-row: 2;
-        }
-        .welcome {
-            grid-row: 4;
-        }
-        .slider {
-            grid-row: 6;
-        }
-        .slide {
-            grid-row: 7;
+
+      /* allow it to gain focus, making it tabbable */
+      .nav-toggle {
+        position: absolute !important;
+        top: -9999px !important;
+        left: -9999px !important;
+      }
+
+      .logo{
+          width: 15em;
+          padding: 0.5em 1em;
+          margin: 0.5em;
+          .st0{
+              fill:#60B0F4;
+            }
+      }
+          .nav-toggle-label {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-right: 1em;
+            height: 100%;
             display: flex;
-            flex-direction: column;
             align-items: center;
+          }
+
+            .nav-toggle-label span,
+            .nav-toggle-label span::before,
+            .nav-toggle-label span::after {
+              display: block;
+              background: #60B0F4;
+              height: 3px;
+              width: 2em;
+              border-radius: 2px;
+              position: relative;
+              transition: all 0.4s ease;
+            }
+
+              .nav-toggle-label span::before,
+              .nav-toggle-label span::after {
+                content: '';
+                position: absolute;
+              }
+            
+              .nav-toggle-label span::before {
+                bottom: 8px;
+              }
+            
+              .nav-toggle-label span::after {
+                top: 8px;
+              }
+            
+            nav {
+              position: absolute;
+              text-align: center;
+              top: 100%;
+              right: 0;
+              background: var(--background);
+              width: 100%;
+              transform: scale(1, 0);
+              transform-origin: top;
+              transition: transform 200ms ease-in-out;
+            }
+            
+              nav ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+              }
+            
+              nav li {
+                margin-bottom: 0.5em;
+                padding: 0.5em;
+              }
+            
+              nav a {
+                color: #60B0F4;
+                text-decoration: none;
+                font-size: 1rem;
+                text-transform: uppercase;
+                opacity: 0;
+                transition: opacity 100ms ease-in-out;
+              }
+            
+                nav a:hover {
+                  color: #000;
+                }
+            
+                  .nav-toggle:checked ~ nav {
+                    transform: scale(1,1);
+                  }
+
+
+        // Animate hamburger on click begins
+        // ---------------------------------
+          .nav-toggle:checked ~ .nav-toggle-label span {
+            transform: rotate(135deg);
+          }
+        // Turn lines into X
+          .nav-toggle:checked ~ .nav-toggle-label span::before,
+          .nav-toggle:checked ~ .nav-toggle-label span::after {
+            top:0;
+            transform: rotate(90deg);
+          }
+        // Rotate on hover when checked
+          .nav-toggle:checked:hover ~ .nav-toggle-label span {
+            transform: rotate(225deg);
+          }
+        // -------------------------------
+        // Animate hamburger on click ends
+
+
+          .nav-toggle:checked ~ nav a {
+            opacity: 1;
+            transition: opacity 150ms ease-in-out 250ms;
+          }
+          
+                    @media screen and (min-width: 1080px) {
+
+                      .nav-toggle-label {
+                        display: none;
+                      }
+                    
+                      header {
+                        display: grid;
+                        grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+                      }
+                      
+                      header .logo {
+                        grid-column: 2 / 3;
+                        margin: 0;
+                      }
+                      
+                        header nav {
+                          // all: unset; /* this causes issues with Edge, since it's unsupported */
+                          position: relative;
+                          text-align: left;
+                          transition: none;
+                          transform: scale(1,1);
+                          background: none;
+                          top: initial;
+                          left: initial;
+                          /* end Edge support stuff */
+                          
+                          grid-column: 3 / 4;
+                          display: flex;
+                          justify-content: flex-end;
+                          align-items: center;
+                        }
+                      
+                          header nav ul {
+                            display: flex;
+                          }
+                          
+                          header nav li {
+                            margin-left: 3em;
+                            margin-bottom: 0;
+                            padding: 0;
+                          }
+                      
+                          header nav a {
+                            opacity: 1;
+                            position: relative;
+                            font-size: 1.2rem;
+                            font-weight: 400;
+                          }
+                      
+                    }
+// --------------------------------------
+// /* Navigation Header styles ends here */
+// --------------------------------------
+
+
+// --------------------------------------
+// /* Main Section styles starts here */
+// --------------------------------------
+main {
+display: grid;
+grid-template-columns: auto;
+grid-template-rows: repeat(3, auto);
+}
+
+
+// --------------------------------------
+// /* Section Greeting styles starts here */
+// --------------------------------------
+.section-greeting {
+  padding: 0 1em;
+  display: grid;
+  grid-template-rows: 1fr auto 0.5fr auto 0.5fr auto 1fr;
+  place-items: center;
+  text-align: center;
+  height: 100vh;
+  background-size: auto, cover;
+  background-image: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)), url(/images/bg-home.jpg);
+  background-attachment: fixed;
+  color: whitesmoke;
+  h1 {
+    font-size: 2rem;
+  }
+  .name {
+      grid-row: 2;
+  }
+  .welcome {
+      grid-row: 4;
+  }
+  .slider {
+      grid-row: 6;
+      h3 {
+        padding-bottom: 1.5em;
+      }
+      h4 {
+        padding-bottom: 1em;
+      }
+  }
+  .slide {
+      grid-row: 7;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .slide-icon {
+    width: 5em;
+    padding-bottom: 1.5em;
+  }
+}
+// --------------------------------------
+// /* Section Greeting styles Ends here */
+// --------------------------------------
+
+// --------------------------------------
+// /* Section Gallery styles starts here */
+// --------------------------------------
+.section-gallery {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    justify-items: center;
+    justify-self: center;
+    text-align: center;
+    h1 {
+        text-transform: uppercase;
+        padding: 1em 0;
+    }
+    .sg-block {
+      padding-bottom: 2em;
+        img {
+          max-width: 100%;
+          height: auto;
         }
+    }
+    .gbd-heading {
+      padding-top: 0.2em;
+  }
+    .gbd-subheading {
+        text-transform: uppercase;
+        padding: 0.2em 0;
+    }
+
+    p {
+      text-align: justify;
+      max-width: 500px;
+      padding: 1em;
+    }
+
+}
+// --------------------------------------
+// /* Section Gallery styles ends here */
+// --------------------------------------
+
+// --------------------------------------
+// /* Section About styles starts here */
+// --------------------------------------
+.section-about {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    justify-items: center;
+    justify-self: center;
+    text-align: center;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)), url(/images/bg-about.jpg);
+    background-size: auto, cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: whitesmoke;
+    padding: 1em 1em 0 1em;
+    h1, h2 {
+      padding: 0.5em 0;
+    }
+    h1 {
+      text-transform: uppercase;
+    }
+    p {
+        text-align: justify;
+        max-width: 500px;
+        padding: 0.5em 0 0.5em 0;
+    }
+    .end-p {
+      padding-bottom: 1em;
+    }
+    .sa-image {
+        padding-bottom: 0px;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+        opacity: 0.3;
+        padding-bottom: 0px;
+    }
+    a {
+        text-decoration: none;
+        color: whitesmoke;
+    }
+}
+// --------------------------------------
+// /* Section About styles ends here */
+// --------------------------------------
+
+// --------------------------------------
+// /* Main Section Media Queries start here */
+// --------------------------------------
+@media only screen and (min-width: 500px) {
+
+    .section-gallery .sg-block a img {
+            box-shadow: 1px 1px 20px 1px #000;
+            border-radius: 0.2em;
+    }
+
+    .button {
+        box-shadow: 0px 0px 2px 0px #000;
+        border-radius: 0.2em;
+    }
+
+}
+
+@media only screen and (min-width: 640px) {
+
+  html {
+      h1 {font-size: 1.8rem;}
+      h2 {font-size: 1.3rem;}
+      h3 {font-size: 1.1rem;}
+      h4 {font-size: 1.1rem;}
+      p {font-size: 1.1rem;}
+  }
+  .section-greeting h1 {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+
+    html {
+        h1 {font-size: 2rem;}
+        h2 {font-size: 1.5rem;}
+        h3 {font-size: 1.2rem;}
+        h4 {font-size: 1.2rem;}
+        p {font-size: 1.2rem;}
+    }
+    .section-greeting h1 {
+      font-size: 3.5rem;
     }
     .section-gallery {
-        display: grid;
-        grid-template-rows: auto auto auto auto;
-        justify-items: center;
-        justify-self: center;
-        text-align: center;
-        h1 {
-            text-transform: uppercase;
-        }
-        p {
-            text-align: justify;
-            max-width: 500px;
-            padding: 0 1rem;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-        .gbd-subheading {
-            text-transform: uppercase;
-        }
-        .sg-block {
-            padding-bottom: 4rem;
-        }
-
-    }
-    .section-about {
-        display: grid;
-        grid-template-rows: auto auto auto;
-        justify-items: center;
-        justify-self: center;
-        text-align: center;
-        width: 100%;
-        background-image: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)), url(/images/bg-about.jpg);
-        background-size: auto, cover;
-        background-attachment: fixed;
-        background-position: center;
-        color: whitesmoke;
-        padding-bottom: 0px;
-        p {
-            text-align: justify;
-            max-width: 500px;
-            padding: 0 1rem;
-        }
-        .sa-image {
-            padding-bottom: 0px;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            opacity: 0.3;
-            padding-bottom: 0px;
-        }
-        a {
-            text-decoration: none;
-            color: whitesmoke;
-        }
+      padding: 5em 0;
+      h1 {
+        padding-top: 0;
+      }
+      p {padding: 0 0 1em 0;}
     }
 
-    @media only screen and (min-width: 501px) {
-        .section-gallery .sg-block a img {
-                box-shadow: 1px 1px 20px 1px #000;
-                border-radius: 0.2rem;
+    .sg-block {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr auto 1fr;
+        grid-template-rows: auto;
+        padding: 2em;
+
+          #image-macedonia {
+            grid-column: 4 / 5;
+            grid-row: 2 / 3;
+          }
+
+          #description-macedonia {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+          }
+
+        .gallery-block-image {
+            grid-column: 2 / 3;
+            padding: 0 2em;
+            align-self: center;
         }
-        .button {
-            box-shadow: 0px 0px 2px 0px #000;
-            border-radius: 0.2rem;
-        }
-    }
-    @media only screen and (min-width: 1080px) {
-        html {
-            font-size: 12px;
-        }
-        .section-greeting {
-            h1 {font-size: 5rem;}
-            h2 {font-size: 3rem;}
-            h3 {font-size: 2rem;}
-            h4 {font-size: 2rem;}
-            p {font-size: 1.5rem;}
-        }
-        .section-gallery p {
-            padding: 0;
-        }
-        .sg-block {
+
+        .gallery-block-description {
+            grid-column: 4 / 5;
             display: flex;
-            width: 100%;
-            flex-direction: row;
-            align-items: stretch;
-            justify-content: center;
-            flex-wrap: wrap;
-            .gallery-block-image {
-                flex-direction: column;
-                padding: 20px;
+            flex-direction: column;
+            text-align: center;
+            align-items: flex-start;
+            justify-content: space-around;
+            padding: 0 2em 1em 2em;
+  
+            .gbd-subheading::after {
+                display: block;
+                background-color: #60b0f4;
+                height: 5px;
+                margin: 0.5em 0;
+                width: 100%;
+                content: "";
             }
+
+            .button {
+                width: 50%;
+            }
+        }
+    }
+
+        .section-gallery #macedonia {
             .gallery-block-description {
-                flex-direction: column;
-                display: flex;
-                text-align: center;
-                align-items: flex-start;
-                justify-content: space-around;
-                padding: 20px;
-                h2 {
-                    margin: 0;
-                }
-                h3 {
-                    margin: 0;
-                }
-                .gbd-subheading::after {
-                    display: block;
-                    background-color: #60b0f4;
-                    height: 5px;
-                    margin-top: 15px;
-                    width: 75px;
-                    content: "";
-                }
-                .button {
-                    width: 50%;
-                }
+              align-items: flex-end;
             }
         }
-            .section-gallery #macedonia {
-                flex-direction: row-reverse;
-            }
-        .section-about {
+
+    .section-about {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+
+        .sa-image {
             display: flex;
-            align-items: stretch;
-            justify-content: center;
-            .sa-image {
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
-            }
-        }
-    }
-    @media only screen and (max-width: 1079px) {
-        .section-about .sa-image {
-            display: none;
+            flex-direction: column;
+            justify-content: flex-end;
         }
     }
 }
 
-// /* Footer styles start here */
-// ----------------------------------------
-    footer {
-        display: grid;
-        grid-template-rows: auto auto;
-        background: var(--background);
-        text-align: center;
-        // width: 100%;
-        box-shadow: 1px 1px 20px 1px #000;
-        border-radius: 0.2rem;
-    }
-    
-    .footer-logo{
-        grid-row: 2 / 3;
-        justify-self: center;
-        width: 15rem;
-        padding: 0;
-        margin: 0;
-        .st0{
-            fill:#60B0F4;
-        }
-    }
-              
-    footer nav {
-        // all: unset; /* this causes issues with Edge, since it's unsupported */
-        position: relative;
-        text-align: center;
-        transition: none;
-        transform: scale(1,1);
-        background: none;
-        top: initial;
-        left: initial;
-        /* end Edge support stuff */
-        
-        grid-row: 1 / 2;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-    }
-        
-    footer nav ul {
-        display: flex;
-        flex-direction: column;
-    }
-        
-    footer nav li {
-        // margin-left: 3em;
-        margin-top: 1rem;
-        padding: 1rem;
-        padding: 0;
-    }
-        
-    footer nav a {
-        opacity: 1;
-        position: relative;
-        color: black;
-    }
+@media only screen and (max-width: 1079px) {
 
-    footer p {
-        grid-row: 3 / 4;
-        font-size: 1.1rem;
+    .section-about .sa-image {
+        display: none;
     }
-     
-    @media screen and (min-width: 800px) {
-        footer nav ul {
-            flex-direction: row;
-        }
-        
-        footer nav li {
-            margin-left: 1.5rem;
-            margin-right: 1.5rem;
-        }
-
-        footer nav a {
-            color: #60B0F4;
-        }
-    }
+}
 // --------------------------------------
-// /* Footer styles end here */
+// /* Main Section Media Queries end here */
+// --------------------------------------
+
+// --------------------------------------
+// /* Main Section styles ends here */
+// --------------------------------------
+
+
+// --------------------------------------
+// /* Footer styles starts here */
+// --------------------------------------
+footer {
+  display: grid;
+  grid-template-rows: auto auto;
+  background: var(--background);
+  text-align: center;
+}
+
+.footer-logo{
+  grid-row: 2 / 3;
+  justify-self: center;
+  width: 10rem;
+  padding: 0 0 0.5em 0;
+  margin: 0;
+  .st0{
+      fill:#60B0F4;
+  }
+}
+        
+footer nav {
+  // all: unset; /* this causes issues with Edge, since it's unsupported */
+  position: relative;
+  text-align: center;
+  transition: none;
+  transform: scale(1,1);
+  background: none;
+  top: initial;
+  left: initial;
+  /* end Edge support stuff */
+  
+  grid-row: 1 / 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+  
+footer nav ul {
+  display: flex;
+  flex-direction: column;
+}
+  
+footer nav li {
+  // margin-left: 3em;
+  margin-top: 1em;
+  padding: 1em;
+  padding: 0;
+}
+  
+footer nav a {
+  opacity: 1;
+  position: relative;
+  color: black;
+}
+
+footer p {
+  grid-row: 3 / 4;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding-bottom: 1em;
+}
+
+@media screen and (min-width: 1080px) {
+  footer nav ul {
+      flex-direction: row;
+  }
+  
+  footer nav li {
+      margin-left: 1.5em;
+      margin-right: 1.5em;
+  }
+
+  footer nav a {
+      color: #60B0F4;
+      font-size: 1.2rem;
+      font-weight: 400;
+  }
+}
+// --------------------------------------
+// /* Footer styles ends here */
+// --------------------------------------
