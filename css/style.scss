@@ -430,6 +430,48 @@ grid-template-rows: repeat(3, auto);
 // /* Section About styles ends here */
 // --------------------------------------
 
+
+
+// --------------------------------------
+// /* Individual Gallery Pages styles start here */
+// --------------------------------------
+.gallery {
+  padding: 5em 0 1em 0;
+  display: grid;
+  grid-template-rows: auto auto;
+  // grid-template-columns: 0.2fr 10fr 0.2fr;
+  grid-gap: 5em;
+  text-align: center;
+  // width: 80%;
+}
+
+.gallery h1 {
+  padding-top: 2.5em;
+}
+
+.my-gallery {
+  // grid-column: 2 / 3;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+  grid-gap: 1em;
+  // align-items: stretch;
+  max-width: 100%;
+}
+
+.my-gallery img{
+  width: 100%;
+}
+
+.my-gallery figcaption {
+  display: none;
+}
+
+// --------------------------------------
+// /* Individual Gallery Pages styles end here */
+// --------------------------------------
+
+
+
 // --------------------------------------
 // /* Main Section Media Queries start here */
 // --------------------------------------
