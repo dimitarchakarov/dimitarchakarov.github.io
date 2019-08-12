@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /gallery/index.html
+Sitemap: https://chakarov.me/sitemap.xml
