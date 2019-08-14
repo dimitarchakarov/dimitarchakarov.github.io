@@ -1,3 +1,4 @@
 User-agent: *
 Disallow: /gallery/index.html
+Disallow: /about.html
 Sitemap: https://chakarov.me/sitemap.xml
