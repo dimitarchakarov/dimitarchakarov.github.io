@@ -298,7 +298,7 @@ grid-template-rows: repeat(3, auto);
 .section-greeting {
   padding: 0 1em;
   display: grid;
-  grid-template-rows: 1fr auto 0.5fr auto 0.5fr auto 1fr;
+  grid-template-rows: 1fr auto 0.5fr auto 0.5fr auto 0.5fr auto 1fr;
   place-items: center;
   text-align: center;
   height: 100vh;
@@ -306,34 +306,78 @@ grid-template-rows: repeat(3, auto);
   background-image: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)), url(/images/bg-home.jpg);
   background-attachment: fixed;
   color: whitesmoke;
+
   h1 {
     font-size: 2rem;
   }
+
   .name {
       grid-row: 2;
   }
+
   .welcome {
       grid-row: 4;
   }
-  .slider {
-      grid-row: 6;
-      h3 {
-        padding-bottom: 1.5em;
-      }
-      h4 {
-        padding-bottom: 1em;
-      }
+
+  .expectations {
+    grid-row: 6;
   }
-  .slide {
-      grid-row: 7;
+
+  .slider {
+      grid-row: 8;
+      margin: 0;
+      padding: 0;
+      left: 0;
+      overflow: hidden;
+      width: 100%;
+  }
+
+  .slider figure {
+    position: relative;
+    display: flex;
+    width: 400%;
+    margin: 0;
+    left: 0;
+    animation: 12s slider infinite;
+  }
+
+  .slider .slide {
+    width: 100%;
+    float: left;
       display: flex;
       flex-direction: column;
       align-items: center;
+      
+      h4 {
+        padding-bottom: 1em;
+      }
+
   }
+
   .slide-icon {
-    width: 5em;
+    width: 3em;
     padding-bottom: 1.5em;
   }
+
+  @keyframes slider {
+
+    0% {left: 0%}
+    30% {left: 0%}
+
+    33% {left: -100%}
+    63% {left: -100%}
+
+    66% {left: -200%}
+    96% {left: -200%}
+
+    99% {left: -300%}
+    100% {left: -300%}
+    
+    // 100% {left: -300%}
+
+  }
+
+
 }
 // --------------------------------------
 // /* Section Greeting styles Ends here */
@@ -540,6 +584,10 @@ grid-template-rows: repeat(3, auto);
     font-size: 3rem;
   }
 
+  .section-greeting .slide-icon {
+    width: 3.5em;
+  }
+
 }
 
 @media only screen and (min-width: 1080px) {
@@ -554,6 +602,11 @@ grid-template-rows: repeat(3, auto);
     .section-greeting h1 {
       font-size: 3.5rem;
     }
+
+    .section-greeting .slide-icon {
+      width: 4em;
+    }
+
     .section-gallery {
       padding: 5em 0;
       h1 {
