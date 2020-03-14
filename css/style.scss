@@ -318,7 +318,7 @@ main {
   height: 100vh;
   background-size: auto, cover;
   background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.25)),
-    url(/images/background-mountains.jpg);
+    url(/images/background-mountains_1920x1077.jpg.jpg);
   background-attachment: fixed;
   color: whitesmoke;
 
@@ -462,7 +462,7 @@ main {
   width: 100%;
   // background-image: linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)), url(/images/bg-about.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55)),
-    url(/images/background-mountains.jpg);
+    url(/images/background-mountains_1920x1077.jpg.jpg);
   background-size: auto, cover;
   background-attachment: fixed;
   background-position: center;
@@ -770,7 +770,7 @@ main {
 
   .section-greeting {
     background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.25)),
-      url(/images/background-mountains.jpg);
+      url(/images/background-mountains_3840x2154.jpg.jpg);
   }
 
   .section-greeting h1 {
@@ -851,7 +851,7 @@ main {
     grid-column-gap: 1em;
     align-content: end;
     background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-      url(/images/background-mountains.jpg);
+      url(/images/background-mountains_3840x2154.jpg.jpg);
     padding: 5em 1em 0 1em;
   }
 
