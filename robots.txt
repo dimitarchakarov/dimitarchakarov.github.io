@@ -1,3 +1,2 @@
-User-agent: *
-Allow: /
+User-agent: * Disallow:
 Sitemap: https://chakarov.me/sitemap.xml
