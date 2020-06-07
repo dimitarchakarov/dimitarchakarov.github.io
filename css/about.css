@@ -6,6 +6,10 @@ body {
   color: whitesmoke;
 }
 
+footer p {
+  color: black;
+}
+
 .about-page {
   min-height: 100vh;
   margin-top: 10vh;
