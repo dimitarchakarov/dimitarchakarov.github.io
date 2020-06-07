@@ -23,6 +23,7 @@ h1 {
 
 h2 {
   padding-bottom: 30px;
+  text-align: center;
 }
 
 .break {
@@ -43,11 +44,6 @@ h2 {
 }
 
 @media only screen and (min-width: 900px) {
-  h1,
-  h2 {
-    align-self: center;
-  }
-
   .about-page {
     margin-bottom: 5vh;
   }
