@@ -460,7 +460,6 @@ main {
   justify-self: center;
   text-align: center;
   width: 100%;
-  // background-image: linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)), url(/images/bg-about.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55)),
     url(/images/background-mountains_1920x1077.jpg);
   background-size: auto, cover;
@@ -470,7 +469,7 @@ main {
   padding: 1em 1em 0 1em;
   h1,
   h2 {
-    padding: 0.5em 0;
+    padding: 1em 0;
   }
   h1 {
     text-transform: uppercase;
@@ -494,9 +493,17 @@ main {
     margin-bottom: -0.3em;
     overflow: hidden;
   }
-  a {
+  .inline-link {
     text-decoration: none;
     color: whitesmoke;
+  }
+  .button {
+    text-decoration: none;
+    color: black;
+  }
+
+  .sa-description {
+    margin-bottom: 1em;
   }
 }
 // --------------------------------------

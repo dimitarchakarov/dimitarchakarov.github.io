@@ -481,7 +481,7 @@ main {
 
 .section-about h1,
 .section-about h2 {
-  padding: 0.5em 0;
+  padding: 1em 0;
 }
 
 .section-about h1 {
@@ -511,9 +511,18 @@ main {
   overflow: hidden;
 }
 
-.section-about a {
+.section-about .inline-link {
   text-decoration: none;
   color: whitesmoke;
+}
+
+.section-about .button {
+  text-decoration: none;
+  color: black;
+}
+
+.section-about .sa-description {
+  margin-bottom: 1em;
 }
 
 @media only screen and (min-width: 500px) {
