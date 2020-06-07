@@ -688,21 +688,6 @@ main {
     max-width: 80vw;
     justify-self: center;
   }
-
-  .about-page h1 {
-    grid-column: 2 / span 3;
-    font-size: 3em;
-    margin-top: -12em;
-  }
-
-  .about-page h2 {
-    grid-column: 2 / span 3;
-    margin-top: -9em;
-  }
-
-  .about-page p {
-    padding: 1em 0;
-  }
 }
 
 @media only screen and (min-width: 2400px) {
@@ -824,21 +809,6 @@ main {
     grid-gap: 2em;
     max-width: 80vw;
     justify-self: center;
-  }
-
-  .about-page h1 {
-    grid-column: 2 / span 3;
-    font-size: 3em;
-    margin-top: -12em;
-  }
-
-  .about-page h2 {
-    grid-column: 2 / span 3;
-    margin-top: -9em;
-  }
-
-  .about-page p {
-    padding: 1em 0;
   }
 }
 
