@@ -1,29 +1,39 @@
 .about-page {
   min-height: 100vh;
+  margin-top: 10vh;
+  display: flex;
+  flex-flow: column;
 }
 
-.about-page h1 {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1 / 2;
-  padding-top: 6em;
+h1 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 10px;
+  font-size: 2rem !important;
 }
 
-.about-page h2 {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2 / 3;
+h2 {
+  /* position: sticky;
+  top: 68px; */
+  padding-bottom: 30px;
+}
+.about-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 10px;
+  position: relative;
 }
 
-.about-page .sa-description {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 1;
-  grid-row: 3 / 4;
+label {
+  padding-right: 10px;
+  font-weight: 700;
 }
 
-.about-page .sa-image {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 1;
-  grid-row: 3 / 4;
+.personal {
+  position: relative;
 }
-/*# sourceMappingURL=about.css.map */
+
+/* .skills-info {
+  display: flex;
+} */
