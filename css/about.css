@@ -1,6 +1,7 @@
 .about-page {
   min-height: 100vh;
   margin-top: 10vh;
+  margin-bottom: 5vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -21,24 +22,6 @@ h2 {
   /* position: sticky;
   top: 68px; */
   padding-bottom: 30px;
-}
-
-.about-info1,
-.about-info2,
-.about-info3,
-.about-info4 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  padding: 10px;
-  position: relative;
 }
 
 .left {
@@ -75,16 +58,7 @@ h2 {
     -ms-grid-column-align: center;
         justify-self: center;
   }
-  .l1,
-  .l2,
-  .l3,
-  .l4,
-  .l5,
-  .l6,
-  .l7,
-  .l8,
-  .l9,
-  .l10 {
+  .left {
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
     grid-column: 2/3;

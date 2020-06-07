@@ -1,6 +1,7 @@
 .about-page {
   min-height: 100vh;
   margin-top: 10vh;
+  margin-bottom: 5vh;
   display: flex;
   flex-flow: column;
 }
@@ -18,16 +19,13 @@ h2 {
   padding-bottom: 30px;
 }
 
-.about-info1,
-.about-info2,
-.about-info3,
-.about-info4 {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  padding: 10px;
-  position: relative;
-}
+// .about-info {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: start;
+//   padding: 10px;
+//   position: relative;
+// }
 
 .left {
   padding-right: 10px;
@@ -57,16 +55,7 @@ h2 {
     }
   }
 
-  .l1,
-  .l2,
-  .l3,
-  .l4,
-  .l5,
-  .l6,
-  .l7,
-  .l8,
-  .l9,
-  .l10 {
+  .left {
     grid-column: 2/3;
     justify-self: right;
   }
