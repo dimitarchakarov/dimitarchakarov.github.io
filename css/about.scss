@@ -1,0 +1,32 @@
+// --------------------------------------
+// /* About Page style starts here */
+// --------------------------------------
+
+.about-page {
+  min-height: 100vh;
+}
+
+.about-page h1 {
+  grid-row: 1 / 2;
+  padding-top: 6em;
+  // grid-column: 2 / span 3;
+  // font-size: 3em;
+}
+
+.about-page h2 {
+  grid-row: 2 / 3;
+  // grid-column: 2 / span 3;
+  // padding-bottom: 5em;
+}
+
+.about-page .sa-description {
+  grid-row: 3 / 4;
+}
+
+.about-page .sa-image {
+  grid-row: 3 / 4;
+}
+
+// --------------------------------------
+// /* About Page style ends here */
+// --------------------------------------

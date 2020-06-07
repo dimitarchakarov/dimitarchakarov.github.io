@@ -1,0 +1,29 @@
+.about-page {
+  min-height: 100vh;
+}
+
+.about-page h1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  padding-top: 6em;
+}
+
+.about-page h2 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+}
+
+.about-page .sa-description {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+}
+
+.about-page .sa-image {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+}
+/*# sourceMappingURL=about.css.map */
