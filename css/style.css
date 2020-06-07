@@ -516,11 +516,6 @@ main {
   color: whitesmoke;
 }
 
-.section-about .button {
-  text-decoration: none;
-  color: black;
-}
-
 .section-about .sa-description {
   margin-bottom: 1em;
 }
