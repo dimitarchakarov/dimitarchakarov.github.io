@@ -1,3 +1,11 @@
+body {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.55)), to(rgba(0, 0, 0, 0.55))), url(../images/background-mountains_1920x1077.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(../images/background-mountains_1920x1077.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  color: whitesmoke;
+}
+
 .about-page {
   min-height: 100vh;
   margin-top: 10vh;
@@ -71,6 +79,13 @@ h2 {
   }
   .break {
     margin: 30px;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  body {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.55)), to(rgba(0, 0, 0, 0.55))), url(../images/background-mountains_3840x2154.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(../images/background-mountains_3840x2154.jpg);
   }
 }
 /*# sourceMappingURL=about.css.map */
