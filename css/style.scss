@@ -244,14 +244,14 @@ nav a:hover {
   transition: opacity 150ms ease-in-out 250ms;
 }
 
-@media screen and (min-width: 1168px) {
+@media screen and (min-width: 1600px) {
   .nav-toggle-label {
     display: none;
   }
 
   header {
     display: grid;
-    grid-template-columns: 1.5fr auto minmax(900px, 3fr) 1.5fr;
+    grid-template-columns: 20vw auto minmax(900px, 3fr) 20vw;
   }
 
   header .logo {
@@ -621,7 +621,7 @@ main {
   }
 }
 
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 1600px) {
   html {
     h1 {
       font-size: 2rem;
@@ -648,8 +648,12 @@ main {
   }
 
   .section-gallery {
+    grid-template-columns:
+      minmax(100px, 20vw) minmax(30vw, max-content) minmax(30vw, max-content)
+      minmax(100px, 20vw);
     padding: 5em 0;
     h1 {
+      grid-column: 1/5;
       padding-top: 0;
     }
     p {
@@ -657,6 +661,15 @@ main {
     }
     .gallery-h1 {
       padding-top: 1em;
+    }
+    .greece {
+      grid-column: 2/4;
+    }
+    .macedonia {
+      grid-column: 2/4;
+    }
+    .romania {
+      grid-column: 2/4;
     }
   }
 
@@ -704,6 +717,16 @@ main {
         width: 50%;
       }
     }
+  }
+
+  .greece {
+    justify-self: left;
+  }
+  .macedonia {
+    justify-self: right;
+  }
+  .romania {
+    justify-self: left;
   }
 
   .section-gallery #macedonia {
