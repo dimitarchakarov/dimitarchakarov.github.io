@@ -4,10 +4,46 @@
 }
 
 h1 {
-  padding-bottom: 50px;
+  margin: 20px;
 }
 
-form p {
+form div {
+  margin: 20px;
+}
+
+.newP {
+  margin: 20px;
+}
+
+.button {
+  cursor: pointer;
+}
+
+.newButton {
+  margin: 10px;
+}
+
+.display-none {
+  display: none;
+}
+
+.form-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form-label {
+  font-weight: 700;
+  padding-bottom: 5px;
+}
+
+.form-input {
+  font-size: 1.2em;
   padding: 10px;
 }
 /*# sourceMappingURL=contact.css.map */

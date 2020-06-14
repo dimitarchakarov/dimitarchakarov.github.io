@@ -212,21 +212,30 @@
     <!-- Ending of the Navigation Header -->
 
     <!-- Beginning of main content -->
-    <div class="contact-page">
-      <h1>Връзка с мен</h1>
-      <form name="contact" method="POST" data-netlify="true">
-        <p>
-          <label>Име: <input type="text" name="name" /></label>
-        </p>
-        <p>
-          <label>Email: <input type="email" name="email" /></label>
-        </p>
-        <p>
-          <label>Съобщение: <textarea name="message"></textarea></label>
-        </p>
-        <p>
-          <button type="submit">Изпрати</button>
-        </p>
+    <div class="contact-page" id="contact-container">
+      <h1 id="contact-header">Връзка с мен</h1>
+      <form
+        id="contact-form"
+        name="contact"
+        method="POST"
+        action="../contact/index.html"
+        data-netlify="true"
+      >
+        <div class="form-item">
+          <label class="form-label" for="name">Име</label>
+          <input class="form-input" type="text" name="name" />
+        </div>
+        <div class="form-item">
+          <label class="form-label" for="email">Email</label>
+          <input class="form-input" type="email" name="email" />
+        </div>
+        <div class="form-item">
+          <label class="form-label" for="message">Съобщение</label>
+          <textarea class="form-input" name="message" rows="10"></textarea>
+        </div>
+        <div class="form-item">
+          <button class="button" type="submit">Изпрати</button>
+        </div>
       </form>
     </div>
     <!-- End of main content -->
@@ -407,5 +416,8 @@
       <p>Димитър Чакъров &copy; 2020</p>
     </footer>
     <!-- Ending of the footer -->
+
+    <!-- JS for the contact form -->
+    <script type="text/javascript" src="../js/contact.js"></script>
   </body>
 </html>

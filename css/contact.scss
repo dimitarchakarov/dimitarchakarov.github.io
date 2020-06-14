@@ -4,9 +4,41 @@
 }
 
 h1 {
-  padding-bottom: 50px;
+  margin: 20px;
 }
 
-form p {
+form div {
+  margin: 20px;
+}
+
+.newP {
+  margin: 20px;
+}
+
+.button {
+  cursor: pointer;
+  //   width: unset !important;
+}
+
+.newButton {
+  margin: 10px;
+}
+
+.display-none {
+  display: none;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-weight: 700;
+  padding-bottom: 5px;
+}
+
+.form-input {
+  font-size: 1.2em;
   padding: 10px;
 }
