@@ -1,23 +1,40 @@
 <urlset xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+<!--
+ created with Free Online Sitemap Generator www.xml-sitemaps.com 
+-->
 <url>
 <loc>https://chakarov.me/</loc>
-<lastmod>2020-06-09T18:48:44+00:00</lastmod>
+<lastmod>2020-06-14T12:18:21+00:00</lastmod>
 <priority>1.00</priority>
 </url>
 <url>
+<loc>https://chakarov.me/gallery/</loc>
+<lastmod>2020-06-14T12:18:21+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://chakarov.me/about/</loc>
+<lastmod>2020-06-14T12:18:21+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://chakarov.me/contact/</loc>
+<lastmod>2020-06-14T12:18:21+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
 <loc>https://chakarov.me/gallery/greece/</loc>
-<lastmod>2020-06-09T18:48:44+00:00</lastmod>
+<lastmod>2020-06-14T12:18:21+00:00</lastmod>
 <priority>0.80</priority>
 </url>
 <url>
 <loc>https://chakarov.me/gallery/macedonia/</loc>
-<lastmod>2020-06-09T18:48:44+00:00</lastmod>
+<lastmod>2020-06-14T12:18:21+00:00</lastmod>
 <priority>0.80</priority>
 </url>
 <url>
 <loc>https://chakarov.me/gallery/romania/</loc>
-<lastmod>2020-06-09T18:48:44+00:00</lastmod>
+<lastmod>2020-06-14T12:18:21+00:00</lastmod>
 <priority>0.80</priority>
 </url>
 </urlset>
