@@ -75,6 +75,7 @@ form div {
 .form-input {
   font-size: 1.2em;
   padding: 10px;
+  font-family: "Merriweather", serif;
 }
 
 .g-recaptcha {
