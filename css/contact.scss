@@ -1,10 +1,19 @@
 .contact-page {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
-  margin-top: 10vh;
+  padding-top: 10vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url(../images/background-mountains_1920x1077.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  color: whitesmoke;
 }
 
 h1 {
+  text-align: center;
   margin: 20px;
+  padding-bottom: 1em;
 }
 
 form div {
@@ -13,6 +22,8 @@ form div {
 
 .newP {
   margin: 20px;
+  text-align: center;
+  padding-bottom: 1em;
 }
 
 .button {
@@ -22,6 +33,8 @@ form div {
 
 .newButton {
   margin: 10px;
+  width: fit-content !important;
+  align-self: center;
 }
 
 .display-none {
@@ -41,4 +54,35 @@ form div {
 .form-input {
   font-size: 1.2em;
   padding: 10px;
+}
+
+.form-input:focus {
+  outline: solid;
+  outline-color: #60b0f4;
+  border: none;
+}
+
+form button:focus {
+  outline: solid;
+  outline-color: #60b0f4;
+  border: none;
+}
+
+@media only screen and (min-width: 640px) {
+  form {
+    align-self: center;
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  form {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  form {
+    width: 50%;
+  }
 }
