@@ -1,4 +1,13 @@
 .contact-page {
   min-height: 100vh;
+  margin-top: 10vh;
+}
+
+h1 {
+  padding-bottom: 50px;
+}
+
+form p {
+  padding: 10px;
 }
 /*# sourceMappingURL=contact.css.map */

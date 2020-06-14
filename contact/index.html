@@ -212,7 +212,23 @@
     <!-- Ending of the Navigation Header -->
 
     <!-- Beginning of main content -->
-    <div class="contact-page"></div>
+    <div class="contact-page">
+      <h1>Връзка с мен</h1>
+      <form name="contact" method="POST" data-netlify="true">
+        <p>
+          <label>Име: <input type="text" name="name" /></label>
+        </p>
+        <p>
+          <label>Email: <input type="email" name="email" /></label>
+        </p>
+        <p>
+          <label>Съобщение: <textarea name="message"></textarea></label>
+        </p>
+        <p>
+          <button type="submit">Изпрати</button>
+        </p>
+      </form>
+    </div>
     <!-- End of main content -->
 
     <!-- Beginning of the footer -->
