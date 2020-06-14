@@ -220,8 +220,16 @@
         name="contact"
         method="POST"
         action="../contact/index.html"
+        netlify-honeypot="bot-field"
+        data-netlify-recaptcha="true"
         data-netlify="true"
       >
+        <div class="display-none">
+          <label for="bot-field"
+            >Не попълвай това поле ако си човешко същество</label
+          >
+          <input name="bot-field" />
+        </div>
         <div class="form-item">
           <label class="form-label" for="name">Име</label>
           <input class="form-input" type="text" name="name" />
@@ -234,6 +242,7 @@
           <label class="form-label" for="message">Съобщение</label>
           <textarea class="form-input" name="message" rows="10"></textarea>
         </div>
+        <div data-netlify-recaptcha="true"></div>
         <div class="form-item">
           <button class="button" type="submit">Изпрати</button>
         </div>
