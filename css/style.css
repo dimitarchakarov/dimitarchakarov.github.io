@@ -48,7 +48,9 @@
   display: inline-block;
   font-size: 1rem;
   font-weight: 600;
-  width: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 h1 {
@@ -518,6 +520,28 @@ main {
 
 .section-about .sa-description {
   margin-bottom: 2em;
+}
+
+.section-about .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.section-about .section-about-button1,
+.section-about .section-about-button2 {
+  width: 100%;
+}
+
+.section-about .section-about-button1 {
+  margin-right: 5px;
+}
+
+.section-about .section-about-button2 {
+  margin-left: 5px;
 }
 
 @media only screen and (min-width: 500px) {

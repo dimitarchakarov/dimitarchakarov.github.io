@@ -52,6 +52,15 @@ h2 {
   position: relative;
 }
 
+.contact-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 @media only screen and (min-width: 900px) {
   .about-page {
     margin-bottom: 5vh;

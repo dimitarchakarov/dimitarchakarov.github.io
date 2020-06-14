@@ -35,7 +35,8 @@ form div {
   padding-bottom: 1em;
 }
 
-.button {
+#button-send {
+  width: 100%;
   cursor: pointer;
 }
 
