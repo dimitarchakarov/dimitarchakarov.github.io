@@ -29,6 +29,8 @@ contactForm.addEventListener("submit", (e) => {
       backButton.textContent = "Начална Страница";
       backButton.className = "button newButton";
       backButton.href = "/";
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     }
   });
 });
