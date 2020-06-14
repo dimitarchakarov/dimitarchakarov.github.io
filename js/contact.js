@@ -66,6 +66,7 @@ const validate = function (ev) {
   //inputs for text, email, tel, color, number...
   let name = document.getElementById("name");
   let email = document.getElementById("email");
+  let pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   let message = document.getElementById("message");
   //.value, .defaultValue, length of value
   if (name.value === "") {
@@ -73,7 +74,17 @@ const validate = function (ev) {
   }
   if (email.value === "") {
     failures.push({ input: "email", msg: "Моля, въведете email" });
+  } else {
+    if (!email.value.match(pattern)) {
+      failures.push({ input: "email", msg: "Невалиден email" });
+      let mailContainer = document.querySelector("#mail-container");
+      let invalidMailError = document.createElement("p");
+      mailContainer.appendChild(invalidMailError);
+      invalidMailError.textContent = "Невалиден email";
+      invalidMailError.className = "red";
+    }
   }
+
   if (message.value === "") {
     failures.push({ input: "message", msg: "Моля, въведете съобщение" });
   }
@@ -81,4 +92,8 @@ const validate = function (ev) {
   //return a boolean || an object with details about the failures
   return failures;
 };
+
 document.addEventListener("DOMContentLoaded", init);
+
+// let invalidMail = document.createElement("p");
+// invalidMail.textContent = "Невалиден e-mail";

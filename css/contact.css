@@ -70,6 +70,10 @@ form div {
   padding: 10px;
 }
 
+.red {
+  color: red;
+}
+
 .form-input::-webkit-input-placeholder {
   color: red;
 }
