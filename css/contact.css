@@ -81,6 +81,9 @@ form div {
   margin: 0 !important;
 }
 
+.g-recaptcha div {
+  margin: 0 !important;
+}
 .form-input:focus {
   outline: solid;
   outline-color: #60b0f4;
