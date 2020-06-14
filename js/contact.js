@@ -101,6 +101,3 @@ mailFocus.addEventListener("focus", (event) => {
 });
 
 document.addEventListener("DOMContentLoaded", init);
-
-// let invalidMail = document.createElement("p");
-// invalidMail.textContent = "Невалиден e-mail";
