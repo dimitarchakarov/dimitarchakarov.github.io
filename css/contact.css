@@ -102,14 +102,6 @@ form button:focus {
   border: none;
 }
 
-.g-recaptcha {
-  margin: unset;
-}
-
-.g-recaptcha div {
-  margin: unset;
-}
-
 @media only screen and (min-width: 640px) {
   form {
     -ms-flex-item-align: center;
