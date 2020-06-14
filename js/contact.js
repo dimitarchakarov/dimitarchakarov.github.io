@@ -3,6 +3,7 @@ const init = function () {
 };
 
 let contactForm = document.querySelector("#contact-form");
+let invalidMailError = document.createElement("p");
 
 // contactForm.addEventListener("submit", (e) => {
 //   e.preventDefault();
@@ -78,7 +79,7 @@ const validate = function (ev) {
     if (!email.value.match(pattern)) {
       failures.push({ input: "email", msg: "Невалиден email" });
       let mailContainer = document.querySelector("#mail-container");
-      let invalidMailError = document.createElement("p");
+      // let invalidMailError = document.createElement("p");
       mailContainer.appendChild(invalidMailError);
       invalidMailError.textContent = "Невалиден email";
       invalidMailError.className = "red";
@@ -92,6 +93,12 @@ const validate = function (ev) {
   //return a boolean || an object with details about the failures
   return failures;
 };
+
+const mailFocus = document.querySelector("#email");
+
+mailFocus.addEventListener("focus", (event) => {
+  invalidMailError.className = "display-none";
+});
 
 document.addEventListener("DOMContentLoaded", init);
 
