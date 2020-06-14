@@ -232,19 +232,24 @@
         </div>
         <div class="form-item">
           <label class="form-label" for="name">Име</label>
-          <input class="form-input" type="text" name="name" />
+          <input class="form-input" type="text" name="name" id="name" />
         </div>
         <div class="form-item">
           <label class="form-label" for="email">Email</label>
-          <input class="form-input" type="email" name="email" />
+          <input class="form-input" type="email" name="email" id="email" />
         </div>
         <div class="form-item">
           <label class="form-label" for="message">Съобщение</label>
-          <textarea class="form-input" name="message" rows="10"></textarea>
+          <textarea
+            class="form-input"
+            name="message"
+            id="message"
+            rows="10"
+          ></textarea>
         </div>
         <div class="form-item" data-netlify-recaptcha="true"></div>
         <div class="form-item">
-          <button class="button" type="submit">Изпрати</button>
+          <button id="button-send" class="button" type="submit">Изпрати</button>
         </div>
       </form>
     </div>
