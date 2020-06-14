@@ -59,6 +59,7 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 2em;
 }
 
 @media only screen and (min-width: 900px) {
