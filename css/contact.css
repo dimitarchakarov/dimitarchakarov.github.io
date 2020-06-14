@@ -4,12 +4,20 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   min-height: 100vh;
   padding-top: 10vh;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.55)), to(rgba(0, 0, 0, 0.55))), url(../images/background-mountains_1920x1077.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(../images/background-mountains_1920x1077.jpg);
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.55)),
+      to(rgba(0, 0, 0, 0.55))
+    ),
+    url(../images/background-mountains_1920x1077.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url(../images/background-mountains_1920x1077.jpg);
   background-size: cover;
   background-attachment: fixed;
   color: whitesmoke;
@@ -41,8 +49,8 @@ form div {
   width: -moz-fit-content !important;
   width: fit-content !important;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -ms-grid-row-align: center;
+  align-self: center;
 }
 
 .display-none {
@@ -55,8 +63,8 @@ form div {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .form-label {
@@ -67,6 +75,10 @@ form div {
 .form-input {
   font-size: 1.2em;
   padding: 10px;
+}
+
+.g-recaptcha {
+  margin: 0 !important;
 }
 
 .form-input:focus {
@@ -84,8 +96,8 @@ form button:focus {
 @media only screen and (min-width: 640px) {
   form {
     -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    -ms-grid-row-align: center;
+    align-self: center;
     width: 80%;
   }
 }
