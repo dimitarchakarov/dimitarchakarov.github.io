@@ -17,25 +17,6 @@
 // --------------------------------------
 // Fonts
 // --------------------------------------
-/* merriweather-300 - latin_cyrillic */
-// @font-face {
-//   font-family: "Merriweather";
-//   font-style: normal;
-//   font-weight: 300;
-//   src: url("../fonts/merriweather-v21-latin_cyrillic-300.eot"); /* IE9 Compat Modes */
-//   src: local("Merriweather Light"), local("Merriweather-Light"),
-//     url("../fonts/merriweather-v21-latin_cyrillic-300.eot?#iefix")
-//       format("embedded-opentype"),
-//     /* IE6-IE8 */ url("../fonts/merriweather-v21-latin_cyrillic-300.woff2")
-//       format("woff2"),
-//     /* Super Modern Browsers */
-//       url("../fonts/merriweather-v21-latin_cyrillic-300.woff") format("woff"),
-//     /* Modern Browsers */
-//       url("../fonts/merriweather-v21-latin_cyrillic-300.ttf") format("truetype"),
-//     /* Safari, Android, iOS */
-//       url("../fonts/merriweather-v21-latin_cyrillic-300.svg#Merriweather")
-//       format("svg"); /* Legacy iOS */
-// }
 
 /* merriweather-regular - latin_cyrillic */
 @font-face {
@@ -90,7 +71,6 @@
   font-family: "Merriweather", serif;
   font-weight: 400;
   font-size: 14px;
-  overflow: hidden;
 }
 
 .button {
@@ -117,20 +97,6 @@ h1 {
 // --------------------------------------
 
 // --------------------------------------
-// /* Body styles starts here */
-// --------------------------------------
-
-// body {
-//   display: grid;
-//   grid-template-columns: auto;
-//   grid-template-rows: repeat(3, auto);
-// }
-
-// --------------------------------------
-// End of Body styles
-// --------------------------------------
-
-// --------------------------------------
 // /* Navigation Header styles starts here */
 // ----------------------------------------
 header {
@@ -140,9 +106,7 @@ header {
   justify-content: center;
   position: sticky;
   top: 0;
-  // left: 0;
   z-index: 10;
-  width: 100vw;
   box-shadow: 0px 0px 20px 0px #000;
 }
 
@@ -165,7 +129,6 @@ header {
   width: 15em;
   padding: 0.5em 1em;
   margin: 0.5em;
-
   .st0 {
     fill: #60b0f4;
   }
@@ -287,7 +250,6 @@ nav a:hover {
     left: initial;
     /* end Edge support stuff */
 
-    // grid-column: 3 / 4;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -415,8 +377,6 @@ nav a:hover {
     100% {
       left: -300%;
     }
-
-    // 100% {left: -300%}
   }
 }
 // --------------------------------------
@@ -451,7 +411,6 @@ nav a:hover {
     }
     position: relative;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
-    // border-radius: 3em;
   }
   .gbd-heading {
     padding-top: 0.2em;
@@ -556,326 +515,6 @@ nav a:hover {
 }
 // --------------------------------------
 // /* Section About styles ends here */
-// --------------------------------------
-
-// --------------------------------------
-// /* Main Section Media Queries start here */
-// --------------------------------------
-/*
-@media only screen and (min-width: 500px) {
-  .section-gallery .sg-block a img {
-    box-shadow: 1px 1px 20px 1px #000;
-    border-radius: 0.2em;
-  }
-
-  .button {
-    box-shadow: 0px 0px 2px 0px #000;
-    border-radius: 0.2em;
-  }
-
-  .gallery {
-    padding: 5em 5em 5em 5em;
-  }
-
-  .my-gallery img {
-    box-shadow: 0px 0px 5px 0px #000;
-    border-radius: 0.2em;
-  }
-}
-
-@media only screen and (min-width: 640px) {
-  html {
-    h1 {
-      font-size: 1.8rem;
-    }
-    h2 {
-      font-size: 1.3rem;
-    }
-    h3 {
-      font-size: 1.1rem;
-    }
-    h4 {
-      font-size: 1.1rem;
-    }
-    p {
-      font-size: 1.1rem;
-    }
-  }
-  .section-greeting h1 {
-    font-size: 3rem;
-  }
-
-  .section-greeting .slide-icon {
-    width: 3.5em;
-  }
-}
-
-@media only screen and (min-width: 1600px) {
-  html {
-    h1 {
-      font-size: 2rem;
-    }
-    h2 {
-      font-size: 1.5rem;
-    }
-    h3 {
-      font-size: 1.2rem;
-    }
-    h4 {
-      font-size: 1.2rem;
-    }
-    p {
-      font-size: 1.2rem;
-    }
-  }
-  .section-greeting h1 {
-    font-size: 3.5rem;
-  }
-
-  .section-greeting .slide-icon {
-    width: 4em;
-  }
-
-  .section-gallery {
-    grid-template-columns:
-      minmax(100px, 20vw) minmax(30vw, max-content) minmax(30vw, max-content)
-      minmax(100px, 20vw);
-    padding: 5em 0;
-    h1 {
-      grid-column: 1/5;
-      padding-top: 0;
-    }
-    p {
-      padding: 0 0 1em 0;
-    }
-    .gallery-h1 {
-      padding-top: 1em;
-    }
-    .greece {
-      grid-column: 2/4;
-    }
-    .macedonia {
-      grid-column: 2/4;
-    }
-    .romania {
-      grid-column: 2/4;
-    }
-  }
-
-  .sg-block {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr auto 1fr;
-    grid-template-rows: auto;
-    padding: 2em;
-
-    #image-macedonia {
-      grid-column: 4 / 5;
-      grid-row: 2 / 3;
-    }
-
-    #description-macedonia {
-      grid-column: 2 / 3;
-      grid-row: 2 / 3;
-    }
-
-    .gallery-block-image {
-      grid-column: 2 / 3;
-      padding: 0 2em;
-      align-self: center;
-    }
-
-    .gallery-block-description {
-      grid-column: 4 / 5;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      align-items: flex-start;
-      justify-content: space-around;
-      padding: 0 2em 1em 2em;
-
-      .gbd-subheading::after {
-        display: block;
-        background-color: #60b0f4;
-        height: 5px;
-        margin: 0.5em 0;
-        width: 100%;
-        content: "";
-      }
-
-      .button {
-        width: 50%;
-      }
-    }
-  }
-
-  .greece {
-    justify-self: left;
-  }
-  .macedonia {
-    justify-self: right;
-  }
-  .romania {
-    justify-self: left;
-  }
-
-  .section-gallery #macedonia {
-    .gallery-block-description {
-      align-items: flex-end;
-    }
-  }
-
-  .section-about {
-    grid-template-columns: 1fr auto 1em auto 1fr;
-    grid-column-gap: 1em;
-    align-content: end;
-  }
-
-  .sa-description {
-    grid-column: 2 / 3;
-  }
-  .sa-image {
-    grid-column: 4 / 5;
-    align-self: end;
-  }
-
-  .my-gallery {
-    grid-template-columns: repeat(auto-fill, minmax(400px, auto));
-    grid-gap: 2em;
-    max-width: 80vw;
-    justify-self: center;
-  }
-}
-
-@media only screen and (min-width: 2400px) {
-  html {
-    h1 {
-      font-size: 2rem;
-    }
-    h2 {
-      font-size: 1.5rem;
-    }
-    h3 {
-      font-size: 1.2rem;
-    }
-    h4 {
-      font-size: 1.2rem;
-    }
-    p {
-      font-size: 1.2rem;
-    }
-  }
-
-  .section-greeting {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.25)),
-      url(/images/background-mountains_3840x2154.jpg);
-  }
-
-  .section-greeting h1 {
-    font-size: 3.5rem;
-  }
-
-  .section-greeting .slide-icon {
-    width: 4em;
-  }
-
-  .section-gallery {
-    padding: 5em 0;
-    h1 {
-      padding-top: 0;
-    }
-    p {
-      padding: 0 0 1em 0;
-    }
-    .gallery-h1 {
-      padding-top: 1em;
-    }
-  }
-
-  .sg-block {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr auto 1fr;
-    grid-template-rows: auto;
-    padding: 2em;
-
-    #image-macedonia {
-      grid-column: 4 / 5;
-      grid-row: 2 / 3;
-    }
-
-    #description-macedonia {
-      grid-column: 2 / 3;
-      grid-row: 2 / 3;
-    }
-
-    .gallery-block-image {
-      grid-column: 2 / 3;
-      padding: 0 2em;
-      align-self: center;
-    }
-
-    .gallery-block-description {
-      grid-column: 4 / 5;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      align-items: flex-start;
-      justify-content: space-around;
-      padding: 0 2em 1em 2em;
-
-      .gbd-subheading::after {
-        display: block;
-        background-color: #60b0f4;
-        height: 5px;
-        margin: 0.5em 0;
-        width: 100%;
-        content: "";
-      }
-
-      .button {
-        width: 50%;
-      }
-    }
-  }
-
-  .section-gallery #macedonia {
-    .gallery-block-description {
-      align-items: flex-end;
-    }
-  }
-
-  .section-about {
-    grid-template-columns: 1fr auto 1em auto 1fr;
-    grid-column-gap: 1em;
-    align-content: end;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-      url(/images/background-mountains_3840x2154.jpg);
-    padding: 5em 1em 0 1em;
-  }
-
-  .sa-description {
-    grid-column: 2 / 3;
-  }
-  .sa-image {
-    grid-column: 4 / 5;
-    align-self: end;
-  }
-
-  .my-gallery {
-    grid-template-columns: repeat(auto-fill, minmax(400px, auto));
-    grid-gap: 2em;
-    max-width: 80vw;
-    justify-self: center;
-  }
-}
-
-@media only screen and (max-width: 1079px) {
-  .section-about .sa-image {
-    display: none;
-  }
-}
-*/
-// --------------------------------------
-// /* Main Section Media Queries end here */
 // --------------------------------------
 
 // --------------------------------------
