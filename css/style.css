@@ -412,7 +412,6 @@ nav a:hover {
 
 .section-gallery-container {
   max-width: 1200px;
-  border: 1px solid red;
   display: -ms-grid;
   display: grid;
   margin: 0 auto;
