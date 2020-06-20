@@ -6,18 +6,27 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 // --------------------------------------
 // /* Individual Gallery Pages styles start here */
 // --------------------------------------
-
 .gallery {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.gallery-container {
   padding: 2em 1em;
   display: grid;
   grid-template-rows: auto auto;
   grid-gap: 5em;
+  width: 100%;
   text-align: center;
+  // max-width: 1200px;
 }
 
 .gallery h1 {
