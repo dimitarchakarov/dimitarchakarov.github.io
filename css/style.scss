@@ -102,7 +102,9 @@
   display: inline-block;
   font-size: 1rem;
   font-weight: 600;
-  width: fit-content;
+  width: 100%;
+  box-shadow: 0px 0px 2px 0px #000;
+  border-radius: 0.2em;
 }
 
 h1 {
@@ -324,11 +326,11 @@ nav a:hover {
 // --------------------------------------
 // /* Main Section styles starts here */
 // --------------------------------------
-main {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: repeat(3, auto);
-}
+// main {
+//   display: grid;
+//   grid-template-columns: auto;
+//   grid-template-rows: repeat(3, auto);
+// }
 
 // --------------------------------------
 // /* Section Greeting styles starts here */
@@ -344,6 +346,8 @@ main {
   background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.25)),
     url(/images/background-mountains_1920x1077.jpg);
   background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
   color: whitesmoke;
 
   h1 {
@@ -436,22 +440,33 @@ main {
 // --------------------------------------
 // /* Section Gallery styles starts here */
 // --------------------------------------
-.section-gallery {
+.section-gallery-container {
+  max-width: 1200px;
+  border: 1px solid red;
   display: grid;
-  grid-template-rows: auto auto auto auto;
-  justify-items: center;
-  justify-self: center;
+  margin: 0 auto;
+  padding: 0 1em 3em 1em;
+  grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+  grid-gap: 1em;
+  justify-content: center;
   text-align: center;
   h1 {
     text-transform: uppercase;
-    padding: 1em 0;
+    padding: 2em 0;
+    grid-column: -1 / 1;
   }
+  //Card styles begins here
   .sg-block {
-    padding-bottom: 2em;
+    display: flex;
+    flex-direction: column;
     img {
       max-width: 100%;
       height: auto;
+      flex-grow: 5;
     }
+    position: relative;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+    // border-radius: 3em;
   }
   .gbd-heading {
     padding-top: 0.2em;
@@ -464,11 +479,20 @@ main {
   p {
     text-align: justify;
     max-width: 500px;
+    margin: 0 auto;
+    height: 100%;
     padding: 1em;
   }
-  .gallery-h1 {
-    padding-top: 4em;
+
+  .sg-block .button {
+    box-shadow: none;
+    border-radius: none;
+
+    // position: absolute;
+    // bottom: 0;
+    // left: 0;
   }
+  //Card styles ends here
 }
 // --------------------------------------
 // /* Section Gallery styles ends here */
@@ -489,6 +513,7 @@ main {
   background-size: auto, cover;
   background-attachment: fixed;
   background-position: center;
+  background-repeat: no-repeat;
   color: whitesmoke;
   padding: 1em 1em 0 1em;
   h1,
@@ -506,17 +531,7 @@ main {
   .end-p {
     padding-bottom: 1em;
   }
-  .sa-image {
-    padding-bottom: 0px;
-  }
-  img {
-    max-width: 100%;
-    height: auto;
-    opacity: 0.3;
-    padding-bottom: 0px;
-    margin-bottom: -0.3em;
-    overflow: hidden;
-  }
+
   .inline-link {
     text-decoration: none;
     color: whitesmoke;
@@ -542,6 +557,15 @@ main {
   .section-about-button2 {
     margin-left: 5px;
   }
+  @media only screen and (max-width: 900px) {
+    .buttons {
+      flex-direction: column;
+    }
+    .section-about-button1,
+    .section-about-button2 {
+      margin: 5px auto;
+    }
+  }
 }
 // --------------------------------------
 // /* Section About styles ends here */
@@ -550,6 +574,7 @@ main {
 // --------------------------------------
 // /* Main Section Media Queries start here */
 // --------------------------------------
+/*
 @media only screen and (min-width: 500px) {
   .section-gallery .sg-block a img {
     box-shadow: 1px 1px 20px 1px #000;
@@ -861,7 +886,7 @@ main {
     display: none;
   }
 }
-
+*/
 // --------------------------------------
 // /* Main Section Media Queries end here */
 // --------------------------------------
