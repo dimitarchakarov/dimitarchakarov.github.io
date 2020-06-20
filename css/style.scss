@@ -274,17 +274,6 @@ nav a:hover {
     display: none;
   }
 
-  header {
-    // display: grid;
-    // grid-template-columns: 20vw auto minmax(900px, 3fr) 20vw;
-    // display: flex;
-  }
-
-  header .logo {
-    // grid-column: 2 / 3;
-    // margin: 0;
-  }
-
   header nav {
     // all: unset; /* this causes issues with Edge, since it's unsupported */
     position: relative;
