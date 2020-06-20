@@ -3,6 +3,8 @@ body {
     url(../images/background-mountains_1920x1077.jpg);
   background-size: cover;
   background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
   color: whitesmoke;
 }
 footer p {
@@ -17,9 +19,8 @@ footer p {
 }
 
 h1 {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  padding-left: 10px;
+  // padding: 2em 0;
+  // padding-left: 10px;
   font-size: 2rem !important;
   text-align: center;
 }
@@ -27,10 +28,6 @@ h1 {
 h2 {
   padding-bottom: 30px;
   text-align: center;
-}
-
-.break {
-  margin: 20px;
 }
 
 .about-info {
@@ -46,10 +43,16 @@ h2 {
   position: relative;
 }
 
+.break {
+  margin: 20px;
+}
+
 .contact-link {
   display: flex;
   justify-content: center;
+  align-self: center;
   margin-bottom: 2em;
+  width: max-content;
 }
 
 @media only screen and (min-width: 900px) {
