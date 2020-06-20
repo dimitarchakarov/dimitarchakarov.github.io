@@ -1,7 +1,22 @@
 // --------------------------------------
-// Beginning of Global Variables
+// Beginning of Global Styles
 // --------------------------------------
 
+// --------------------------------------
+// All elements with pseudo selectors reset
+// --------------------------------------
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+// --------------------------------------
+
+// --------------------------------------
+// Fonts
+// --------------------------------------
 /* merriweather-300 - latin_cyrillic */
 @font-face {
   font-family: "Merriweather";
@@ -63,9 +78,15 @@
       url("../fonts/merriweather-v21-latin_cyrillic-700.svg#Merriweather")
       format("svg"); /* Legacy iOS */
 }
+// --------------------------------------
 
+// --------------------------------------
+// Global Elements
+// --------------------------------------
 :root {
+  // Global Colors
   --background: rgba(240, 240, 240, 1);
+  //-------------------------------------
   font-family: "Merriweather", serif;
   font-weight: 300;
   font-size: 14px;
@@ -87,30 +108,21 @@
 h1 {
   font-size: 1.5rem;
 }
-// --------------------------------------
-// End of Global Variables
-// --------------------------------------
 
 // --------------------------------------
-// Pseudo elements box-sizing reset
-// --------------------------------------
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
+// End of Global Styles
 // --------------------------------------
 
 // --------------------------------------
 // /* Body styles starts here */
 // --------------------------------------
-body {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: repeat(3, auto);
-}
+
+// body {
+//   display: grid;
+//   grid-template-columns: auto;
+//   grid-template-rows: repeat(3, auto);
+// }
+
 // --------------------------------------
 // End of Body styles
 // --------------------------------------
@@ -120,13 +132,23 @@ body {
 // ----------------------------------------
 header {
   background: var(--background);
-  text-align: center;
-  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
   top: 0;
-  left: 0;
+  // left: 0;
   z-index: 10;
-  width: 100%;
+  width: 100vw;
   box-shadow: 0px 0px 20px 0px #000;
+}
+
+.header-container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  align-items: center;
+  justify-content: center;
 }
 
 /* allow it to gain focus, making it tabbable */
@@ -144,6 +166,7 @@ header {
     fill: #60b0f4;
   }
 }
+
 .nav-toggle-label {
   position: absolute;
   top: 0;
@@ -244,19 +267,20 @@ nav a:hover {
   transition: opacity 150ms ease-in-out 250ms;
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 900px) {
   .nav-toggle-label {
     display: none;
   }
 
   header {
-    display: grid;
-    grid-template-columns: 20vw auto minmax(900px, 3fr) 20vw;
+    // display: grid;
+    // grid-template-columns: 20vw auto minmax(900px, 3fr) 20vw;
+    // display: flex;
   }
 
   header .logo {
-    grid-column: 2 / 3;
-    margin: 0;
+    // grid-column: 2 / 3;
+    // margin: 0;
   }
 
   header nav {
@@ -270,7 +294,7 @@ nav a:hover {
     left: initial;
     /* end Edge support stuff */
 
-    grid-column: 3 / 4;
+    // grid-column: 3 / 4;
     display: flex;
     justify-content: flex-end;
     align-items: center;

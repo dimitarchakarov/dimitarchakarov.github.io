@@ -1,3 +1,12 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 /* merriweather-300 - latin_cyrillic */
 @font-face {
   font-family: "Merriweather";
@@ -57,34 +66,38 @@ h1 {
   font-size: 1.5rem;
 }
 
-*,
-*::before,
-*::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-body {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: auto;
-      grid-template-columns: auto;
-  -ms-grid-rows: (auto)[3];
-      grid-template-rows: repeat(3, auto);
-}
-
 header {
   background: var(--background);
-  text-align: center;
-  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: -webkit-sticky;
+  position: sticky;
   top: 0;
-  left: 0;
   z-index: 10;
-  width: 100%;
+  width: 100vw;
   -webkit-box-shadow: 0px 0px 20px 0px #000;
           box-shadow: 0px 0px 20px 0px #000;
+}
+
+.header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 /* allow it to gain focus, making it tabbable */
@@ -216,21 +229,9 @@ nav a:hover {
   transition: opacity 150ms ease-in-out 250ms;
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 900px) {
   .nav-toggle-label {
     display: none;
-  }
-  header {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 20vw auto minmax(900px, 3fr) 20vw;
-        grid-template-columns: 20vw auto minmax(900px, 3fr) 20vw;
-  }
-  header .logo {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    grid-column: 2 / 3;
-    margin: 0;
   }
   header nav {
     position: relative;
@@ -243,9 +244,6 @@ nav a:hover {
     top: initial;
     left: initial;
     /* end Edge support stuff */
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 1;
-    grid-column: 3 / 4;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
