@@ -188,7 +188,8 @@ nav a {
   transition: opacity 100ms ease-in-out;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus {
   color: #000;
 }
 
@@ -463,10 +464,6 @@ nav a:hover {
   -webkit-box-shadow: none;
           box-shadow: none;
   border-radius: none;
-}
-
-.gallery-page-section {
-  min-height: 100vh;
 }
 
 .section-about {
