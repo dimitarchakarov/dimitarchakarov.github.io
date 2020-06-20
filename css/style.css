@@ -475,6 +475,10 @@ nav a:hover {
   border-radius: none;
 }
 
+.gallery-page-section {
+  min-height: 100vh;
+}
+
 .section-about {
   display: -ms-grid;
   display: grid;

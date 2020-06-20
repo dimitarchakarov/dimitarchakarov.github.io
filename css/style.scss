@@ -476,13 +476,15 @@ nav a:hover {
   .sg-block .button {
     box-shadow: none;
     border-radius: none;
-
-    // position: absolute;
-    // bottom: 0;
-    // left: 0;
   }
+
   //Card styles ends here
 }
+
+.gallery-page-section {
+  min-height: 100vh;
+}
+
 // --------------------------------------
 // /* Section Gallery styles ends here */
 // --------------------------------------
