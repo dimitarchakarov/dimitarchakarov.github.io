@@ -1,8 +1,19 @@
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 // --------------------------------------
 // /* Individual Gallery Pages styles start here */
 // --------------------------------------
+
 .gallery {
-  padding: 5em 0 1em 0;
+  padding: 2em 1em;
   display: grid;
   grid-template-rows: auto auto;
   grid-gap: 5em;
@@ -27,6 +38,11 @@
 .my-gallery figcaption {
   display: none;
 }
+
 // --------------------------------------
 // /* Individual Gallery Pages styles end here */
 // --------------------------------------
+
+footer {
+  margin-top: auto;
+}
