@@ -8,16 +8,6 @@
 }
 
 /* merriweather-300 - latin_cyrillic */
-@font-face {
-  font-family: "Merriweather";
-  font-style: normal;
-  font-weight: 300;
-  src: url("../fonts/merriweather-v21-latin_cyrillic-300.eot");
-  /* IE9 Compat Modes */
-  src: local("Merriweather Light"), local("Merriweather-Light"), url("../fonts/merriweather-v21-latin_cyrillic-300.eot?#iefix") format("embedded-opentype"), url("../fonts/merriweather-v21-latin_cyrillic-300.woff2") format("woff2"), url("../fonts/merriweather-v21-latin_cyrillic-300.woff") format("woff"), url("../fonts/merriweather-v21-latin_cyrillic-300.ttf") format("truetype"), url("../fonts/merriweather-v21-latin_cyrillic-300.svg#Merriweather") format("svg");
-  /* Legacy iOS */
-}
-
 /* merriweather-regular - latin_cyrillic */
 @font-face {
   font-family: "Merriweather";
@@ -43,7 +33,7 @@
 :root {
   --background: rgba(240, 240, 240, 1);
   font-family: "Merriweather", serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 14px;
   overflow: hidden;
 }
