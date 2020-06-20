@@ -553,23 +553,13 @@ nav a:hover {
 }
 
 footer {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: auto auto;
-      grid-template-rows: auto auto;
   background: var(--background);
   text-align: center;
 }
 
 .footer-logo {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2 / 3;
-  -ms-grid-column-align: center;
-      justify-self: center;
   width: 10rem;
-  padding: 0 0 0.5em 0;
-  margin: 0;
+  margin: 1em 0 auto;
 }
 
 .footer-logo .st0 {
@@ -578,18 +568,10 @@ footer {
 
 footer nav {
   position: relative;
-  text-align: center;
   -webkit-transition: none;
   transition: none;
   -webkit-transform: scale(1, 1);
           transform: scale(1, 1);
-  background: none;
-  top: initial;
-  left: initial;
-  /* end Edge support stuff */
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1 / 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -599,7 +581,7 @@ footer nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 2em;
+  margin-top: 1em;
   margin-bottom: 1em;
 }
 
@@ -614,27 +596,22 @@ footer nav ul {
 }
 
 footer nav li {
-  margin-top: 1em;
   padding: 1em;
-  padding: 0;
 }
 
 footer nav a {
   opacity: 1;
   position: relative;
-  color: black;
+  color: #60b0f4;
 }
 
 footer p {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 1;
-  grid-row: 3 / 4;
   font-size: 0.8rem;
   font-weight: 700;
   padding-bottom: 1em;
 }
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 900px) {
   footer nav ul {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -646,9 +623,7 @@ footer p {
     margin-right: 1.5em;
   }
   footer nav a {
-    color: #60b0f4;
     font-size: 1.2rem;
-    font-weight: 400;
   }
 }
 /*# sourceMappingURL=style.css.map */
