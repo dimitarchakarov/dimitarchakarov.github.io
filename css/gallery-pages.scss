@@ -14,7 +14,7 @@ body {
 // --------------------------------------
 .gallery {
   display: flex;
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
   width: 100%;
 }
@@ -26,7 +26,6 @@ body {
   grid-gap: 5em;
   width: 100%;
   text-align: center;
-  // max-width: 1200px;
 }
 
 .gallery h1 {
@@ -46,6 +45,18 @@ body {
 
 .my-gallery figcaption {
   display: none;
+}
+
+@media screen and (min-width: 900px) {
+  .my-gallery {
+    grid-gap: 2rem 1rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .my-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(400px, auto));
+  }
 }
 
 // --------------------------------------

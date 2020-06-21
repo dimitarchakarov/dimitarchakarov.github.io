@@ -20,7 +20,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
   width: 100%;
 }
@@ -55,6 +55,19 @@ body {
 
 .my-gallery figcaption {
   display: none;
+}
+
+@media screen and (min-width: 900px) {
+  .my-gallery {
+    grid-gap: 2rem 1rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .my-gallery {
+    -ms-grid-columns: (minmax(400px, auto))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(400px, auto));
+  }
 }
 
 footer {
