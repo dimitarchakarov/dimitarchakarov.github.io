@@ -414,7 +414,7 @@ nav a:focus {
   margin: 0 auto;
   padding: 0 1rem 3rem 1rem;
   grid-template-columns: repeat(auto-fill, minmax(300px, auto));
-  grid-gap: 1rem;
+  grid-gap: 1rem 1rem;
   justify-content: center;
   text-align: center;
   h1 {
@@ -466,6 +466,7 @@ nav a:focus {
   .section-gallery-container {
     max-width: 1400px;
     grid-template-columns: repeat(auto-fill, minmax(400px, auto));
+    grid-gap: 2rem 1rem;
   }
 
   .section-gallery-container h1 {
