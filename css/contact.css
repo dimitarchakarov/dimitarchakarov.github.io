@@ -52,6 +52,7 @@ form div {
 #button-send {
   width: 100%;
   cursor: pointer;
+  font-family: "Merriweather", serif;
 }
 
 .newButton {

@@ -67,7 +67,7 @@
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 header {
@@ -300,10 +300,6 @@ nav a:focus {
   color: whitesmoke;
 }
 
-.section-greeting h1 {
-  font-size: 2rem;
-}
-
 .section-greeting .name {
   -ms-grid-row: 2;
   grid-row: 2;
@@ -486,7 +482,7 @@ nav a:focus {
 
 @media screen and (min-width: 900px) {
   .section-gallery {
-    margin: 10rem 0;
+    margin: 7rem 0;
   }
   .section-gallery-container {
     max-width: 1400px;
@@ -590,7 +586,10 @@ nav a:focus {
 
 @media screen and (min-width: 900px) {
   .section-about {
-    padding: 10rem 0;
+    padding: 7rem 0;
+  }
+  .sa-description {
+    margin-bottom: unset;
   }
 }
 

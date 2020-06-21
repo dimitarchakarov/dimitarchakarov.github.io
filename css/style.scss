@@ -103,7 +103,7 @@
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 // --------------------------------------
@@ -319,10 +319,6 @@ nav a:focus {
   background-position: center;
   color: whitesmoke;
 
-  h1 {
-    font-size: 2rem;
-  }
-
   .name {
     grid-row: 2;
   }
@@ -460,7 +456,7 @@ nav a:focus {
 
 @media screen and (min-width: 900px) {
   .section-gallery {
-    margin: 10rem 0;
+    margin: 7rem 0;
   }
 
   .section-gallery-container {
@@ -477,7 +473,6 @@ nav a:focus {
 @media screen and (min-width: 1400px) {
   .section-gallery-container {
     max-width: 1600px;
-    // grid-template-columns: repeat(auto-fill, minmax(500px, auto));
   }
 }
 
@@ -558,7 +553,10 @@ nav a:focus {
 
 @media screen and (min-width: 900px) {
   .section-about {
-    padding: 10rem 0;
+    padding: 7rem 0;
+  }
+  .sa-description {
+    margin-bottom: unset;
   }
 }
 // --------------------------------------
