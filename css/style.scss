@@ -491,11 +491,8 @@ nav a:focus {
 // --------------------------------------
 
 .section-about {
-  display: grid;
-  grid-template-rows: auto auto auto;
-  justify-items: center;
-  justify-self: center;
-  text-align: center;
+  display: flex;
+  justify-content: center;
   width: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55)),
     url(/images/background-mountains_1920x1077.jpg);
@@ -504,67 +501,84 @@ nav a:focus {
   background-position: center;
   background-repeat: no-repeat;
   color: whitesmoke;
-  padding: 1em 1em 0 1em;
-  h1,
-  h2 {
-    padding: 1em 0;
-  }
-  h1 {
-    text-transform: uppercase;
-  }
-  p {
-    text-align: justify;
-    max-width: 500px;
-    padding: 0.5em 0 0.5em 0;
-  }
-  .end-p {
-    padding-bottom: 1em;
-  }
-
+  padding: 1rem 1rem 0 1rem;
   .inline-link {
     text-decoration: none;
     color: whitesmoke;
   }
+}
 
-  .sa-description {
-    margin-bottom: 2em;
-  }
+.sa-description {
+  display: grid;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
 
-  .buttons {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .section-about-button1,
-  .section-about-button2 {
-    width: 100%;
+  h1,
+  h2 {
+    padding: 1rem 0;
   }
 
-  .section-about-button1 {
-    margin-right: 5px;
+  h1 {
+    text-transform: uppercase;
   }
-  .section-about-button2 {
-    margin-left: 5px;
+
+  p,
+  li {
+    text-align: justify;
+    margin: 1rem;
   }
-  @media only screen and (max-width: 900px) {
-    .buttons {
-      flex-direction: column;
-    }
-    .section-about-button1,
-    .section-about-button2 {
-      margin: 5px auto;
-    }
+
+  li {
+    margin-left: 2rem;
   }
 }
 
-@media screen and (min-width: 900px) {
+.button1 {
+  margin: 1rem 1rem 0 1rem;
+}
+
+.button2 {
+  margin: 1rem 1rem 2rem 1rem;
+}
+
+@media only screen and (min-width: 900px) {
   .section-about {
     padding: 7rem 0;
   }
+
   .sa-description {
+    grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
+    max-width: 1600px;
     margin-bottom: unset;
+    h1,
+    h2 {
+      margin: 2rem 0;
+    }
+  }
+
+  .sa-description h1,
+  .sa-description h2 {
+    grid-column: span 5;
+  }
+
+  .sa-description-block1 {
+    grid-column: 2/3;
+  }
+  .sa-description-block2 {
+    grid-column: 4/5;
+  }
+  .button1 {
+    grid-column: 2/3;
+    margin: 1rem;
+  }
+
+  .button2 {
+    grid-column: 4/5;
+    margin: 1rem;
   }
 }
+
 // --------------------------------------
 // /* Section About styles ends here */
 // --------------------------------------

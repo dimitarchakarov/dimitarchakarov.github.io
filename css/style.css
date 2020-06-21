@@ -508,14 +508,12 @@ nav a:focus {
 }
 
 .section-about {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: auto auto auto;
-      grid-template-rows: auto auto auto;
-  justify-items: center;
-  -ms-grid-column-align: center;
-      justify-self: center;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.35)), to(rgba(0, 0, 0, 0.55))), url(/images/background-mountains_1920x1077.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55)), url(/images/background-mountains_1920x1077.jpg);
@@ -524,26 +522,7 @@ nav a:focus {
   background-position: center;
   background-repeat: no-repeat;
   color: whitesmoke;
-  padding: 1em 1em 0 1em;
-}
-
-.section-about h1,
-.section-about h2 {
-  padding: 1em 0;
-}
-
-.section-about h1 {
-  text-transform: uppercase;
-}
-
-.section-about p {
-  text-align: justify;
-  max-width: 500px;
-  padding: 0.5em 0 0.5em 0;
-}
-
-.section-about .end-p {
-  padding-bottom: 1em;
+  padding: 1rem 1rem 0 1rem;
 }
 
 .section-about .inline-link {
@@ -551,51 +530,80 @@ nav a:focus {
   color: whitesmoke;
 }
 
-.section-about .sa-description {
-  margin-bottom: 2em;
-}
-
-.section-about .buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.section-about .section-about-button1,
-.section-about .section-about-button2 {
+.sa-description {
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
   width: 100%;
+  max-width: 500px;
 }
 
-.section-about .section-about-button1 {
-  margin-right: 5px;
+.sa-description h1,
+.sa-description h2 {
+  padding: 1rem 0;
 }
 
-.section-about .section-about-button2 {
-  margin-left: 5px;
+.sa-description h1 {
+  text-transform: uppercase;
 }
 
-@media only screen and (max-width: 900px) {
-  .section-about .buttons {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .section-about .section-about-button1,
-  .section-about .section-about-button2 {
-    margin: 5px auto;
-  }
+.sa-description p,
+.sa-description li {
+  text-align: justify;
+  margin: 1rem;
 }
 
-@media screen and (min-width: 900px) {
+.sa-description li {
+  margin-left: 2rem;
+}
+
+.button1 {
+  margin: 1rem 1rem 0 1rem;
+}
+
+.button2 {
+  margin: 1rem 1rem 2rem 1rem;
+}
+
+@media only screen and (min-width: 900px) {
   .section-about {
     padding: 7rem 0;
   }
   .sa-description {
+    -ms-grid-columns: 1fr 2fr 1fr 2fr 1fr;
+        grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
+    max-width: 1600px;
     margin-bottom: unset;
+  }
+  .sa-description h1,
+  .sa-description h2 {
+    margin: 2rem 0;
+  }
+  .sa-description h1,
+  .sa-description h2 {
+    grid-column: span 5;
+  }
+  .sa-description-block1 {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+  }
+  .sa-description-block2 {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 1;
+    grid-column: 4/5;
+  }
+  .button1 {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    margin: 1rem;
+  }
+  .button2 {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 1;
+    grid-column: 4/5;
+    margin: 1rem;
   }
 }
 
