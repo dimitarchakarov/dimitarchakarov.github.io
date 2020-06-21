@@ -428,14 +428,28 @@ nav a:focus {
   .sg-block {
     display: flex;
     flex-direction: column;
+
     img {
       max-width: 100%;
-      height: auto;
-      flex-grow: 5;
+      height: 100%;
     }
+
     position: relative;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
   }
+
+  .gallery-block-image {
+    background: rgba(92, 92, 92, 0.8);
+  }
+
+  .gallery-block-image img {
+    opacity: 0.85;
+  }
+
+  .gallery-block-image img:hover {
+    opacity: 1;
+  }
+
   .gbd-heading {
     padding-top: 0.2rem;
   }

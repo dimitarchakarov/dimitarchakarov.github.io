@@ -457,10 +457,19 @@ nav a:focus {
 
 .section-gallery-container .sg-block img {
   max-width: 100%;
-  height: auto;
-  -webkit-box-flex: 5;
-      -ms-flex-positive: 5;
-          flex-grow: 5;
+  height: 100%;
+}
+
+.section-gallery-container .gallery-block-image {
+  background: rgba(92, 92, 92, 0.8);
+}
+
+.section-gallery-container .gallery-block-image img {
+  opacity: 0.85;
+}
+
+.section-gallery-container .gallery-block-image img:hover {
+  opacity: 1;
 }
 
 .section-gallery-container .gbd-heading {
