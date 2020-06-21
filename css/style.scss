@@ -75,6 +75,18 @@
   font-size: 14px;
 }
 
+@media screen and (min-width: 900px) {
+  :root {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  :root {
+    font-size: 18px;
+  }
+}
+
 .button {
   background-color: var(--background);
   color: black;
@@ -118,6 +130,12 @@ header {
   max-width: 1200px;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (min-width: 900px) {
+  .header-container {
+    max-width: 1600px;
+  }
 }
 
 /* allow it to gain focus, making it tabbable */
@@ -237,7 +255,7 @@ nav a:focus {
   transition: opacity 150ms ease-in-out 250ms;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1024px) {
   .nav-toggle-label {
     display: none;
   }
@@ -293,7 +311,7 @@ nav a:focus {
   place-items: center;
   text-align: center;
   height: 100vh;
-  background-size: auto, cover;
+  background-size: cover;
   background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.25)),
     url(/images/background-mountains_1920x1077.jpg);
   background-attachment: fixed;
@@ -389,18 +407,19 @@ nav a:focus {
 // --------------------------------------
 // /* Section Gallery styles starts here */
 // --------------------------------------
+
 .section-gallery-container {
   max-width: 1200px;
   display: grid;
   margin: 0 auto;
-  padding: 0 1em 3em 1em;
+  padding: 0 1rem 3rem 1rem;
   grid-template-columns: repeat(auto-fill, minmax(300px, auto));
-  grid-gap: 1em;
+  grid-gap: 1rem;
   justify-content: center;
   text-align: center;
   h1 {
     text-transform: uppercase;
-    padding: 2em 0;
+    padding: 2rem 0;
     grid-column: -1 / 1;
   }
   //Card styles begins here
@@ -416,11 +435,11 @@ nav a:focus {
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
   }
   .gbd-heading {
-    padding-top: 0.2em;
+    padding-top: 0.2rem;
   }
   .gbd-subheading {
     text-transform: uppercase;
-    padding: 0.2em 0;
+    padding: 0.2rem 0;
   }
 
   p {
@@ -428,7 +447,7 @@ nav a:focus {
     max-width: 500px;
     margin: 0 auto;
     height: 100%;
-    padding: 1em;
+    padding: 1rem;
   }
 
   .sg-block .button {
@@ -439,6 +458,28 @@ nav a:focus {
   //Card styles ends here
 }
 
+@media screen and (min-width: 900px) {
+  .section-gallery {
+    margin: 10rem 0;
+  }
+
+  .section-gallery-container {
+    max-width: 1400px;
+    grid-template-columns: repeat(auto-fill, minmax(400px, auto));
+  }
+
+  .section-gallery-container h1 {
+    padding: 0 0 4rem 0;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .section-gallery-container {
+    max-width: 1600px;
+    // grid-template-columns: repeat(auto-fill, minmax(500px, auto));
+  }
+}
+
 // --------------------------------------
 // /* Section Gallery styles ends here */
 // --------------------------------------
@@ -446,6 +487,7 @@ nav a:focus {
 // --------------------------------------
 // /* Section About styles starts here */
 // --------------------------------------
+
 .section-about {
   display: grid;
   grid-template-rows: auto auto auto;
@@ -512,6 +554,12 @@ nav a:focus {
     }
   }
 }
+
+@media screen and (min-width: 900px) {
+  .section-about {
+    padding: 10rem 0;
+  }
+}
 // --------------------------------------
 // /* Section About styles ends here */
 // --------------------------------------
@@ -530,7 +578,7 @@ footer {
 
 .footer-logo {
   width: 10rem;
-  margin: 1em 0 auto;
+  margin: 2rem 0 auto;
   .st0 {
     fill: #60b0f4;
   }

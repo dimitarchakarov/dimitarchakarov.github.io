@@ -38,6 +38,18 @@
   font-size: 14px;
 }
 
+@media screen and (min-width: 900px) {
+  :root {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  :root {
+    font-size: 18px;
+  }
+}
+
 .button {
   background-color: var(--background);
   color: black;
@@ -89,6 +101,12 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media screen and (min-width: 900px) {
+  .header-container {
+    max-width: 1600px;
+  }
 }
 
 /* allow it to gain focus, making it tabbable */
@@ -221,7 +239,7 @@ nav a:focus {
   transition: opacity 150ms ease-in-out 250ms;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1024px) {
   .nav-toggle-label {
     display: none;
   }
@@ -273,7 +291,7 @@ nav a:focus {
   place-items: center;
   text-align: center;
   height: 100vh;
-  background-size: auto, cover;
+  background-size: cover;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.55)), to(rgba(0, 0, 0, 0.25))), url(/images/background-mountains_1920x1077.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.25)), url(/images/background-mountains_1920x1077.jpg);
   background-attachment: fixed;
@@ -406,10 +424,10 @@ nav a:focus {
   display: -ms-grid;
   display: grid;
   margin: 0 auto;
-  padding: 0 1em 3em 1em;
+  padding: 0 1rem 3rem 1rem;
   -ms-grid-columns: (minmax(300px, auto))[auto-fill];
       grid-template-columns: repeat(auto-fill, minmax(300px, auto));
-  grid-gap: 1em;
+  grid-gap: 1rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -418,7 +436,7 @@ nav a:focus {
 
 .section-gallery-container h1 {
   text-transform: uppercase;
-  padding: 2em 0;
+  padding: 2rem 0;
   grid-column: -1 / 1;
 }
 
@@ -444,12 +462,12 @@ nav a:focus {
 }
 
 .section-gallery-container .gbd-heading {
-  padding-top: 0.2em;
+  padding-top: 0.2rem;
 }
 
 .section-gallery-container .gbd-subheading {
   text-transform: uppercase;
-  padding: 0.2em 0;
+  padding: 0.2rem 0;
 }
 
 .section-gallery-container p {
@@ -457,13 +475,33 @@ nav a:focus {
   max-width: 500px;
   margin: 0 auto;
   height: 100%;
-  padding: 1em;
+  padding: 1rem;
 }
 
 .section-gallery-container .sg-block .button {
   -webkit-box-shadow: none;
           box-shadow: none;
   border-radius: none;
+}
+
+@media screen and (min-width: 900px) {
+  .section-gallery {
+    margin: 10rem 0;
+  }
+  .section-gallery-container {
+    max-width: 1400px;
+    -ms-grid-columns: (minmax(400px, auto))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(400px, auto));
+  }
+  .section-gallery-container h1 {
+    padding: 0 0 4rem 0;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .section-gallery-container {
+    max-width: 1600px;
+  }
 }
 
 .section-about {
@@ -549,6 +587,12 @@ nav a:focus {
   }
 }
 
+@media screen and (min-width: 900px) {
+  .section-about {
+    padding: 10rem 0;
+  }
+}
+
 footer {
   background: var(--background);
   text-align: center;
@@ -556,7 +600,7 @@ footer {
 
 .footer-logo {
   width: 10rem;
-  margin: 1em 0 auto;
+  margin: 2rem 0 auto;
 }
 
 .footer-logo .st0 {
