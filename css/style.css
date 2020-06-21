@@ -579,8 +579,8 @@ nav a:focus {
     padding: 7rem 0;
   }
   .sa-description {
-    -ms-grid-columns: 1fr 2fr 1fr 2fr 1fr;
-        grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
+    -ms-grid-columns: 1fr 5fr 2rem 5fr 1fr;
+        grid-template-columns: 1fr 5fr 2rem 5fr 1fr;
     max-width: 1600px;
     margin-bottom: unset;
   }
