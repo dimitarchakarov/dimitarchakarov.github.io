@@ -102,6 +102,12 @@
   border-radius: 0.2em;
 }
 
+.button:hover,
+.button:focus {
+  color: white;
+  background-color: #60b0f4;
+}
+
 h1 {
   font-size: 2rem;
 }
@@ -448,7 +454,7 @@ nav a:focus {
 
   .sg-block .button {
     box-shadow: none;
-    border-radius: none;
+    border-radius: unset;
   }
 
   //Card styles ends here

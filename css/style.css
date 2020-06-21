@@ -66,6 +66,12 @@
   border-radius: 0.2em;
 }
 
+.button:hover,
+.button:focus {
+  color: white;
+  background-color: #60b0f4;
+}
+
 h1 {
   font-size: 2rem;
 }
@@ -477,7 +483,7 @@ nav a:focus {
 .section-gallery-container .sg-block .button {
   -webkit-box-shadow: none;
           box-shadow: none;
-  border-radius: none;
+  border-radius: unset;
 }
 
 @media screen and (min-width: 900px) {
