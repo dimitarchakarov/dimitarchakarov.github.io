@@ -45,11 +45,7 @@ h2 {
 }
 
 .contact-link {
-  display: flex;
-  justify-content: center;
-  align-self: center;
-  margin-bottom: 2em;
-  width: max-content;
+  margin-bottom: 1.5rem;
 }
 
 @media only screen and (min-width: 900px) {
@@ -78,6 +74,16 @@ h2 {
   .break {
     grid-column: 1 / 7;
     margin: 10px;
+  }
+
+  .contact-link {
+    place-items: center;
+    margin-bottom: initial;
+  }
+
+  .button-to-contact {
+    max-width: 500px;
+    grid-column: 3 / 5;
   }
 }
 @media only screen and (min-width: 2000px) {
