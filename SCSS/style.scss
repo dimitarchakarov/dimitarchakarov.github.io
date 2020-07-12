@@ -120,6 +120,10 @@ h1 {
   display: none;
 }
 
+.flag svg {
+  max-width: 25px;
+}
+
 // --------------------------------------
 // End of Global Styles
 // --------------------------------------
@@ -220,11 +224,12 @@ nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
-}
+  }
 
 nav li {
   margin-bottom: 0.5em;
   padding: 0.5em;
+  align-self: center;
 }
 
 nav a {
@@ -434,6 +439,13 @@ nav a:focus {
     100% {
       opacity: 1;
       transform: none;
+    }
+  }
+
+  @media screen and (min-width: 900px) {
+    h1 {
+      font-size: 4rem !important;
+      letter-spacing: 3px;
     }
   }
 }
