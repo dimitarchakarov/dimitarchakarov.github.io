@@ -33,7 +33,7 @@ const send = function (ev) {
         let backButton = document.createElement("a");
         let formBody = document.querySelector("#contact-form");
 
-        h1.textContent = "Thank you for contacting me";
+        h1.textContent = "Thank you for contacting me!";
         formBody.className = "display-none";
         formContainer.appendChild(newP);
         newP.textContent = "I will get back to you as soon as possible.";
