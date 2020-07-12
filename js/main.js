@@ -1,3 +1,29 @@
+// Scroll cue stuff starts here
+const scrollCue = document.querySelector(".scroll-icon");
+const sectionGallery = document.querySelector(".section-gallery");
+const sectionGalleryOptions = {
+    rootMargin: "0% 0% -20% 0%"
+};
+
+const sectionGalleryObserver = new IntersectionObserver(function(entries, sectionGalleryObserver) {
+entries.forEach(entry => {
+    if(entry.isIntersecting){
+        scrollCue.classList.add("display-none")
+    }
+    else{
+        scrollCue.classList.remove("display-none")
+    }
+})
+}, sectionGalleryOptions);
+
+sectionGalleryObserver.observe(sectionGallery);
+
+// Scroll cue stuff ends here
+// 
+// 
+// 
+// Photoswipe stuff starts here
+
 var initPhotoSwipeFromDOM = function(gallerySelector) {
 
     // parse slide data (url, title, size ...) from DOM elements 
@@ -203,3 +229,5 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 
 // execute above function
 initPhotoSwipeFromDOM('.my-gallery');
+
+// Photoswipe stuff ends here

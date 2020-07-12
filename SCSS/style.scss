@@ -116,6 +116,10 @@ h1 {
   font-size: 2rem;
 }
 
+.display-none {
+  display: none;
+}
+
 // --------------------------------------
 // End of Global Styles
 // --------------------------------------
@@ -328,9 +332,12 @@ nav a:focus {
   background-repeat: no-repeat;
   background-position: center;
   color: whitesmoke;
-
+ 
   .name {
     grid-row: 2;
+    h1 {
+      font-size: 2.5rem;
+    }
   }
 
   .welcome {
@@ -403,6 +410,30 @@ nav a:focus {
     }
     100% {
       left: -300%;
+    }
+  }
+
+  .scroll-icon {
+    grid-row: 9;
+    animation: pulse 2s 0.5s ease-out infinite;
+  }
+
+  .fa-angle-down {
+    font-size: 1.5rem;
+  }
+
+  @keyframes pulse {
+    0% {
+      opacity: 1;
+      transform: none;
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: none;
     }
   }
 }
@@ -649,7 +680,7 @@ footer p {
   padding-bottom: 2rem;
 }
 
-.fa {
+.fab {
   padding: 1rem;
   font-size: 20px !important;
   width: 50px;
@@ -660,11 +691,11 @@ footer p {
   opacity: 0.9;
 }
 
-.fa:hover {
+.fab:hover {
     opacity: 1;
 }
 
-.fa-facebook {
+.fa-facebook-f {
   background: #3B5998;
   color: white;
 }
@@ -693,7 +724,7 @@ footer p {
     font-size: 1.2rem;
   }
 
-  .fa {
+  .fab {
     padding: 1rem;
     font-size: 30px !important;
     width: 70px;
