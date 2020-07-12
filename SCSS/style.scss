@@ -657,10 +657,11 @@ footer p {
   text-decoration: none;
   margin: 0 0.5rem 2rem 0.5rem;
   border-radius: 5%;
+  opacity: 0.9;
 }
 
 .fa:hover {
-    opacity: 0.7;
+    opacity: 1;
 }
 
 .fa-facebook {
