@@ -1,45 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
       xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xhtml="http://www.w3.org/1999/xhtml"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
 
 <url>
   <loc>https://chakarov.me/</loc>
-  <lastmod>2020-06-14T12:18:21+00:00</lastmod>
+  <xhtml:link rel="alternate" hreflang="bg" href="https://chakarov.me/"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://chakarov.me/en/"/>
+  <lastmod>2020-07-13T20:18:21+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://chakarov.me/gallery/</loc>
-  <lastmod>2020-06-14T12:18:21+00:00</lastmod>
+  <xhtml:link rel="alternate" hreflang="bg" href="https://chakarov.me/gallery/"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://chakarov.me/en/gallery/"/>
+  <lastmod>2020-07-13T20:18:21+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://chakarov.me/about/</loc>
-  <lastmod>2020-06-14T12:18:21+00:00</lastmod>
+  <xhtml:link rel="alternate" hreflang="bg" href="https://chakarov.me/about/"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://chakarov.me/en/about/"/>
+  <lastmod>2020-07-13T20:18:21+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://chakarov.me/contact/</loc>
-  <lastmod>2020-06-14T12:18:21+00:00</lastmod>
+  <xhtml:link rel="alternate" hreflang="bg" href="https://chakarov.me/contact/"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://chakarov.me/en/contact/"/>
+  <lastmod>2020-07-13T20:18:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://chakarov.me/gallery/austria/</loc>
+  <xhtml:link rel="alternate" hreflang="bg" href="https://chakarov.me/gallery/austria/"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://chakarov.me/en/gallery/austria/"/>
+  <lastmod>2020-07-13T20:18:21+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://chakarov.me/gallery/greece/</loc>
-  <lastmod>2020-06-14T12:18:21+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://chakarov.me/gallery/greece/"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://chakarov.me/en/gallery/greece/"/>
+  <lastmod>2020-07-13T20:18:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://chakarov.me/gallery/hungary/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://chakarov.me/gallery/hungary/"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://chakarov.me/en/gallery/hungary/"/>
+  <lastmod>2020-07-13T20:18:21+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://chakarov.me/gallery/macedonia/</loc>
-  <lastmod>2020-06-14T12:18:21+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://chakarov.me/gallery/macedonia/"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://chakarov.me/en/gallery/macedonia/"/>
+  <lastmod>2020-07-13T20:18:21+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://chakarov.me/gallery/romania/</loc>
-  <lastmod>2020-06-14T12:18:21+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://chakarov.me/gallery/romania/"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://chakarov.me/en/gallery/romania/"/>
+  <lastmod>2020-07-13T20:18:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://chakarov.me/gallery/slovakia/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://chakarov.me/gallery/slovakia/"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://chakarov.me/en/gallery/slovakia/"/>
+  <lastmod>2020-07-13T20:18:21+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
