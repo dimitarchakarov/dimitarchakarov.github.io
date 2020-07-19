@@ -1,0 +1,88 @@
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(../images/background-mountains_1920x1077.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: whitesmoke;
+}
+
+footer p {
+  color: black;
+}
+
+.about-page {
+  min-height: 100vh;
+  margin-top: 10vh;
+  display: flex;
+  flex-flow: column;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.about-info {
+  padding: 10px;
+}
+
+.left {
+  padding-right: 10px;
+  font-weight: 700;
+}
+
+.personal {
+  position: relative;
+}
+
+.break {
+  margin: 20px;
+}
+
+.contact-link {
+  margin-bottom: 1.5rem;
+}
+
+@media only screen and (min-width: 900px) {
+  .about-page {
+    margin-bottom: 5vh;
+  }
+  .about-info {
+    display: grid;
+    grid-template-columns: 10vw 10vw 1fr 1fr 10vw 10vw;
+    grid-gap: 5px;
+  }
+  .centered-heading {
+    margin-top: 50px;
+    grid-column: 1 / 7;
+    text-align: center;
+  }
+  .left {
+    grid-column: 3/4;
+    justify-self: right;
+  }
+  .break {
+    grid-column: 1 / 7;
+    margin: 10px;
+  }
+  .contact-link {
+    place-items: center;
+    margin-bottom: initial;
+  }
+  .button-to-contact {
+    max-width: 500px;
+    grid-column: 3 / 5;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(../images/background-mountains_3840x2154.jpg);
+  }
+}
+/*# sourceMappingURL=about.css.map */

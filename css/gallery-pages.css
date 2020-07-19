@@ -4,21 +4,12 @@ html {
 
 body {
   min-height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .gallery {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   max-width: 1600px;
   margin: 0 auto;
@@ -27,10 +18,8 @@ body {
 
 .gallery-container {
   padding: 2em 1em;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-rows: auto auto;
-      grid-template-rows: auto auto;
+  grid-template-rows: auto auto;
   grid-gap: 5em;
   width: 100%;
   text-align: center;
@@ -41,10 +30,8 @@ body {
 }
 
 .my-gallery {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(300px, auto))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+  grid-template-columns: repeat(auto-fill, minmax(300px, auto));
   grid-gap: 1em;
   max-width: 100%;
 }
@@ -65,8 +52,7 @@ body {
 
 @media screen and (min-width: 1400px) {
   .my-gallery {
-    -ms-grid-columns: (minmax(400px, auto))[auto-fill];
-        grid-template-columns: repeat(auto-fill, minmax(400px, auto));
+    grid-template-columns: repeat(auto-fill, minmax(400px, auto));
   }
 }
 
