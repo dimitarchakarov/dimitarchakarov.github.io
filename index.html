@@ -793,7 +793,10 @@
         <a target="_blank" rel="noreferrer noopener" href="https://twitter.com/DBChakarov" class="fab fa-twitter"></a>
         <a target="_blank" rel="noreferrer noopener" href="https://www.instagram.com/dimitarborislavovchakarov/" class="fab fa-instagram"></a>
       </div>
-      <p>Димитър Чакъров &copy; <script async>document.write(new Date().getFullYear())</script></p>
+      <p>Димитър Чакъров &copy; <span id="copyright-year">2022</span></p>
+        <script>
+          document.querySelector('#copyright-year').innerText = new Date().getFullYear();
+        </script>
     </footer>
     <!-- Ending of the footer -->
   </body>
