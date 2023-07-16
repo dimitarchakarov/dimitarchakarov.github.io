@@ -369,6 +369,7 @@ nav a:focus {
     width: 400%;
     margin: 0;
     left: 0;
+    will-change: transform;
     animation: 12s slider infinite;
   }
 

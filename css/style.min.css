@@ -85,7 +85,7 @@ nav a:hover, nav a:focus { color: #000; }
 
 .section-greeting .slider { grid-row: 8; margin: 0; padding: 0; left: 0; overflow: hidden; width: 100%; }
 
-.section-greeting .slider figure { position: relative; display: flex; width: 400%; margin: 0; left: 0; animation: 12s slider infinite; }
+.section-greeting .slider figure { position: relative; display: flex; width: 400%; margin: 0; left: 0; will-change: transform; animation: 12s slider infinite; }
 
 .section-greeting .slider .slide { width: 100%; float: left; display: flex; flex-direction: column; align-items: center; }
 
